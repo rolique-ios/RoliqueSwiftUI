@@ -13,6 +13,9 @@
 		254ADA3922F1DD9900B24B52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427C22F1B5E300343F96 /* LoginViewModel.swift */; };
 		254ADA3A22F1DDA300B24B52 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE90D22F1CD7D0014A500 /* ViewModel.swift */; };
 		254ADA3B22F1DDA400B24B52 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE90D22F1CD7D0014A500 /* ViewModel.swift */; };
+		254ADA5622F1DEE000B24B52 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 254ADA5422F1DEE000B24B52 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		254ADA5922F1DEE000B24B52 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254ADA5222F1DEE000B24B52 /* Networking.framework */; };
+		254ADA5A22F1DEE000B24B52 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 254ADA5222F1DEE000B24B52 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		254DE90E22F1CD7D0014A500 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE90D22F1CD7D0014A500 /* ViewModel.swift */; };
 		254DE98422F1DD040014A500 /* UI.h in Headers */ = {isa = PBXBuildFile; fileRef = 254DE98222F1DD040014A500 /* UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		254DE98722F1DD040014A500 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254DE98022F1DD040014A500 /* UI.framework */; };
@@ -36,6 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		254ADA5722F1DEE000B24B52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25E225E422F195DA00098DA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 254ADA5122F1DEE000B24B52;
+			remoteInfo = Networking;
+		};
 		254DE98522F1DD040014A500 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 25E225E422F195DA00098DA6 /* Project object */;
@@ -66,6 +76,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				254ADA5A22F1DEE000B24B52 /* Networking.framework in Embed Frameworks */,
 				254DE9AA22F1DD240014A500 /* Utils.framework in Embed Frameworks */,
 				254DE9BB22F1DD3B0014A500 /* Model.framework in Embed Frameworks */,
 				254DE98822F1DD040014A500 /* UI.framework in Embed Frameworks */,
@@ -76,6 +87,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		254ADA5222F1DEE000B24B52 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		254ADA5422F1DEE000B24B52 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		254ADA5522F1DEE000B24B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		254DE90D22F1CD7D0014A500 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		254DE91222F1D0220014A500 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		254DE98022F1DD040014A500 /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +113,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		254ADA4F22F1DEE000B24B52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		254DE97D22F1DD040014A500 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				254ADA5922F1DEE000B24B52 /* Networking.framework in Frameworks */,
 				254DE9A922F1DD240014A500 /* Utils.framework in Frameworks */,
 				254DE9BA22F1DD3B0014A500 /* Model.framework in Frameworks */,
 				254DE98722F1DD040014A500 /* UI.framework in Frameworks */,
@@ -133,6 +155,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		254ADA5322F1DEE000B24B52 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				254ADA5422F1DEE000B24B52 /* Networking.h */,
+				254ADA5522F1DEE000B24B52 /* Info.plist */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		254DE91122F1CEC30014A500 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +214,7 @@
 				254DE98122F1DD040014A500 /* UI */,
 				254DE9A322F1DD240014A500 /* Utils */,
 				254DE9B422F1DD3B0014A500 /* Model */,
+				254ADA5322F1DEE000B24B52 /* Networking */,
 				25E225ED22F195DA00098DA6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -194,6 +226,7 @@
 				254DE98022F1DD040014A500 /* UI.framework */,
 				254DE9A222F1DD240014A500 /* Utils.framework */,
 				254DE9B322F1DD3A0014A500 /* Model.framework */,
+				254ADA5222F1DEE000B24B52 /* Networking.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,6 +267,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		254ADA4D22F1DEE000B24B52 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				254ADA5622F1DEE000B24B52 /* Networking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		254DE97B22F1DD040014A500 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,6 +302,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		254ADA5122F1DEE000B24B52 /* Networking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 254ADA5B22F1DEE000B24B52 /* Build configuration list for PBXNativeTarget "Networking" */;
+			buildPhases = (
+				254ADA4D22F1DEE000B24B52 /* Headers */,
+				254ADA4E22F1DEE000B24B52 /* Sources */,
+				254ADA4F22F1DEE000B24B52 /* Frameworks */,
+				254ADA5022F1DEE000B24B52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Networking;
+			productName = Networking;
+			productReference = 254ADA5222F1DEE000B24B52 /* Networking.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		254DE97F22F1DD040014A500 /* UI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 254DE98B22F1DD040014A500 /* Build configuration list for PBXNativeTarget "UI" */;
@@ -330,6 +389,7 @@
 				254DE98622F1DD040014A500 /* PBXTargetDependency */,
 				254DE9A822F1DD240014A500 /* PBXTargetDependency */,
 				254DE9B922F1DD3B0014A500 /* PBXTargetDependency */,
+				254ADA5822F1DEE000B24B52 /* PBXTargetDependency */,
 			);
 			name = ROLIQUE;
 			productName = ROLIQUE;
@@ -346,6 +406,9 @@
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Bohdan Savych";
 				TargetAttributes = {
+					254ADA5122F1DEE000B24B52 = {
+						CreatedOnToolsVersion = 11.0;
+					};
 					254DE97F22F1DD040014A500 = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -377,11 +440,19 @@
 				254DE97F22F1DD040014A500 /* UI */,
 				254DE9A122F1DD240014A500 /* Utils */,
 				254DE9B222F1DD3A0014A500 /* Model */,
+				254ADA5122F1DEE000B24B52 /* Networking */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		254ADA5022F1DEE000B24B52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		254DE97E22F1DD040014A500 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,6 +487,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		254ADA4E22F1DEE000B24B52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		254DE97C22F1DD040014A500 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -461,6 +539,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		254ADA5822F1DEE000B24B52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 254ADA5122F1DEE000B24B52 /* Networking */;
+			targetProxy = 254ADA5722F1DEE000B24B52 /* PBXContainerItemProxy */;
+		};
 		254DE98622F1DD040014A500 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 254DE97F22F1DD040014A500 /* UI */;
@@ -490,6 +573,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		254ADA5C22F1DEE000B24B52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZL58JZZ8KD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Networking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.rolique.Networking;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		254ADA5D22F1DEE000B24B52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZL58JZZ8KD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Networking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.rolique.Networking;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		254DE98922F1DD040014A500 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -811,6 +948,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		254ADA5B22F1DEE000B24B52 /* Build configuration list for PBXNativeTarget "Networking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				254ADA5C22F1DEE000B24B52 /* Debug */,
+				254ADA5D22F1DEE000B24B52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		254DE98B22F1DD040014A500 /* Build configuration list for PBXNativeTarget "UI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
