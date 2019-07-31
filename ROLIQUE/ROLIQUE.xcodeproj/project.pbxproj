@@ -36,6 +36,14 @@
 		25E225FC22F195DC00098DA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E225FA22F195DC00098DA6 /* LaunchScreen.storyboard */; };
 		25FC427922F1A0F000343F96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427822F1A0F000343F96 /* LoginView.swift */; };
 		25FC427D22F1B5E300343F96 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427C22F1B5E300343F96 /* LoginViewModel.swift */; };
+		B57B34BF22F1E42100E6A4F6 /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B34BE22F1E42100E6A4F6 /* Net.swift */; };
+		B57B34C122F1E4BB00E6A4F6 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B34C022F1E4BB00E6A4F6 /* Route.swift */; };
+		B57B34C322F1F73D00E6A4F6 /* Late.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B34C222F1F73D00E6A4F6 /* Late.swift */; };
+		B57B34C522F1F7E000E6A4F6 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B34C422F1F7E000E6A4F6 /* Command.swift */; };
+		B57B34C822F2297200E6A4F6 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B34C722F2297200E6A4F6 /* DataProvider.swift */; };
+		B57B34D122F23FBC00E6A4F6 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B34CA22F22B4600E6A4F6 /* Json.swift */; };
+		B57B34D322F2AF9300E6A4F6 /* ActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B34D222F2AF9300E6A4F6 /* ActionResult.swift */; };
+		B57B34D522F2B3D100E6A4F6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B34D422F2B3D100E6A4F6 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +118,14 @@
 		25E225FD22F195DC00098DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25FC427822F1A0F000343F96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		25FC427C22F1B5E300343F96 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B57B34BE22F1E42100E6A4F6 /* Net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
+		B57B34C022F1E4BB00E6A4F6 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		B57B34C222F1F73D00E6A4F6 /* Late.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Late.swift; sourceTree = "<group>"; };
+		B57B34C422F1F7E000E6A4F6 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		B57B34C722F2297200E6A4F6 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		B57B34CA22F22B4600E6A4F6 /* Json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
+		B57B34D222F2AF9300E6A4F6 /* ActionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionResult.swift; sourceTree = "<group>"; };
+		B57B34D422F2B3D100E6A4F6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +174,8 @@
 		254ADA5322F1DEE000B24B52 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B57B34BD22F1E3D300E6A4F6 /* Transport */,
+				B57B34BC22F1E3C000E6A4F6 /* Router */,
 				254ADA5422F1DEE000B24B52 /* Networking.h */,
 				254ADA5522F1DEE000B24B52 /* Info.plist */,
 			);
@@ -202,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				254DE9B522F1DD3B0014A500 /* Model.h */,
+				B57B34D622F2B3D600E6A4F6 /* Provider */,
+				B57B34D722F2B3EC00E6A4F6 /* Models */,
 				254DE9B622F1DD3B0014A500 /* Info.plist */,
 			);
 			path = Model;
@@ -262,6 +282,50 @@
 				25FC427C22F1B5E300343F96 /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		B57B34BC22F1E3C000E6A4F6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B57B34C022F1E4BB00E6A4F6 /* Route.swift */,
+				B57B34C622F226DC00E6A4F6 /* Commands */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B57B34BD22F1E3D300E6A4F6 /* Transport */ = {
+			isa = PBXGroup;
+			children = (
+				B57B34BE22F1E42100E6A4F6 /* Net.swift */,
+				B57B34CA22F22B4600E6A4F6 /* Json.swift */,
+			);
+			path = Transport;
+			sourceTree = "<group>";
+		};
+		B57B34C622F226DC00E6A4F6 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				B57B34C422F1F7E000E6A4F6 /* Command.swift */,
+				B57B34C222F1F73D00E6A4F6 /* Late.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		B57B34D622F2B3D600E6A4F6 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				B57B34C722F2297200E6A4F6 /* DataProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		B57B34D722F2B3EC00E6A4F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B57B34D222F2AF9300E6A4F6 /* ActionResult.swift */,
+				B57B34D422F2B3D100E6A4F6 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +472,7 @@
 				TargetAttributes = {
 					254ADA5122F1DEE000B24B52 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					254DE97F22F1DD040014A500 = {
 						CreatedOnToolsVersion = 11.0;
@@ -417,6 +482,7 @@
 					};
 					254DE9B222F1DD3A0014A500 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					25E225EB22F195DA00098DA6 = {
 						CreatedOnToolsVersion = 11.0;
@@ -491,6 +557,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57B34C122F1E4BB00E6A4F6 /* Route.swift in Sources */,
+				B57B34D122F23FBC00E6A4F6 /* Json.swift in Sources */,
+				B57B34C322F1F73D00E6A4F6 /* Late.swift in Sources */,
+				B57B34BF22F1E42100E6A4F6 /* Net.swift in Sources */,
+				B57B34C522F1F7E000E6A4F6 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +591,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57B34D322F2AF9300E6A4F6 /* ActionResult.swift in Sources */,
+				B57B34C822F2297200E6A4F6 /* DataProvider.swift in Sources */,
+				B57B34D522F2B3D100E6A4F6 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +650,7 @@
 		254ADA5C22F1DEE000B24B52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -593,6 +668,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.rolique.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -603,6 +679,7 @@
 		254ADA5D22F1DEE000B24B52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -738,6 +815,7 @@
 		254DE9BD22F1DD3B0014A500 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -755,6 +833,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.rolique.Model;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -765,6 +844,7 @@
 		254DE9BE22F1DD3B0014A500 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
