@@ -7,23 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		254DE90E22F1CD7D0014A500 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE90D22F1CD7D0014A500 /* ViewModel.swift */; };
+		254DE91322F1D0220014A500 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE91222F1D0220014A500 /* Colors.swift */; };
 		25E225F022F195DA00098DA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225EF22F195DA00098DA6 /* AppDelegate.swift */; };
 		25E225F222F195DA00098DA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225F122F195DA00098DA6 /* SceneDelegate.swift */; };
-		25E225F422F195DA00098DA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225F322F195DA00098DA6 /* ContentView.swift */; };
 		25E225F622F195DC00098DA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E225F522F195DC00098DA6 /* Assets.xcassets */; };
 		25E225F922F195DC00098DA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E225F822F195DC00098DA6 /* Preview Assets.xcassets */; };
 		25E225FC22F195DC00098DA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E225FA22F195DC00098DA6 /* LaunchScreen.storyboard */; };
+		25FC427922F1A0F000343F96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427822F1A0F000343F96 /* LoginView.swift */; };
+		25FC427D22F1B5E300343F96 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427C22F1B5E300343F96 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		25FC426E22F19A8500343F96 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		254DE90D22F1CD7D0014A500 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		254DE91222F1D0220014A500 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		25E225EC22F195DA00098DA6 /* ROLIQUE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ROLIQUE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E225EF22F195DA00098DA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25E225F122F195DA00098DA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		25E225F322F195DA00098DA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		25E225F522F195DC00098DA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25E225F822F195DC00098DA6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		25E225FB22F195DC00098DA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25E225FD22F195DC00098DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25FC427822F1A0F000343F96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		25FC427C22F1B5E300343F96 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +56,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		254DE90F22F1CEAA0014A500 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				254DE91222F1D0220014A500 /* Colors.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		254DE91122F1CEC30014A500 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25E225F722F195DC00098DA6 /* Preview Content */,
+				25E225EF22F195DA00098DA6 /* AppDelegate.swift */,
+				25E225F122F195DA00098DA6 /* SceneDelegate.swift */,
+				25E225F522F195DC00098DA6 /* Assets.xcassets */,
+				25E225FA22F195DC00098DA6 /* LaunchScreen.storyboard */,
+				25E225FD22F195DC00098DA6 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		25E225E322F195DA00098DA6 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +96,10 @@
 		25E225EE22F195DA00098DA6 /* ROLIQUE */ = {
 			isa = PBXGroup;
 			children = (
-				25E225EF22F195DA00098DA6 /* AppDelegate.swift */,
-				25E225F122F195DA00098DA6 /* SceneDelegate.swift */,
-				25E225F322F195DA00098DA6 /* ContentView.swift */,
-				25E225F522F195DC00098DA6 /* Assets.xcassets */,
-				25E225FA22F195DC00098DA6 /* LaunchScreen.storyboard */,
-				25E225FD22F195DC00098DA6 /* Info.plist */,
-				25E225F722F195DC00098DA6 /* Preview Content */,
+				254DE90F22F1CEAA0014A500 /* Helper */,
+				25FC427722F1A0E700343F96 /* Login */,
+				25FC427422F19C8600343F96 /* Base */,
+				254DE91122F1CEC30014A500 /* Resources */,
 			);
 			path = ROLIQUE;
 			sourceTree = "<group>";
@@ -75,6 +112,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		25FC427422F19C8600343F96 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				254DE90D22F1CD7D0014A500 /* ViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		25FC427722F1A0E700343F96 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				25FC427822F1A0F000343F96 /* LoginView.swift */,
+				25FC427C22F1B5E300343F96 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +139,7 @@
 				25E225E822F195DA00098DA6 /* Sources */,
 				25E225E922F195DA00098DA6 /* Frameworks */,
 				25E225EA22F195DA00098DA6 /* Resources */,
+				25FC426E22F19A8500343F96 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,9 +201,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25FC427922F1A0F000343F96 /* LoginView.swift in Sources */,
+				254DE91322F1D0220014A500 /* Colors.swift in Sources */,
 				25E225F022F195DA00098DA6 /* AppDelegate.swift in Sources */,
 				25E225F222F195DA00098DA6 /* SceneDelegate.swift in Sources */,
-				25E225F422F195DA00098DA6 /* ContentView.swift in Sources */,
+				254DE90E22F1CD7D0014A500 /* ViewModel.swift in Sources */,
+				25FC427D22F1B5E300343F96 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,10 +343,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "ROLIQUE/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "ROLIQUE/Resources/Preview\\ Content";
 				DEVELOPMENT_TEAM = ZL58JZZ8KD;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = ROLIQUE/Info.plist;
+				INFOPLIST_FILE = ROLIQUE/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,10 +363,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "ROLIQUE/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "ROLIQUE/Resources/Preview\\ Content";
 				DEVELOPMENT_TEAM = ZL58JZZ8KD;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = ROLIQUE/Info.plist;
+				INFOPLIST_FILE = ROLIQUE/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
