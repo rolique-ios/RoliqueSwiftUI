@@ -9,10 +9,14 @@
 import UIKit
 import SwiftUI
 
-struct LoginView: View {
-  let viewModel: LoginViewModel
-    
-  var body: some View {
+public struct LoginView: View {
+  private let viewModel: LoginViewModel
+  
+  public init(viewModel: LoginViewModel) {
+    self.viewModel = viewModel
+  }
+  
+  public var body: some View {
     Group {
       ZStack {
         Colors.Login.backgroundColor.edgesIgnoringSafeArea(.all)

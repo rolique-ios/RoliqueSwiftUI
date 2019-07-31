@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  LoginViewModel.swift
 //  ROLIQUE
 //
 //  Created by Bohdan Savych on 7/31/19.
@@ -8,4 +8,10 @@
 
 import Foundation
 
-protocol ViewModel {}
+public protocol LoginViewModel: ViewModel {
+  
+}
+
+public final class LoginViewModelImpl: LoginViewModel {
+  
+}
