@@ -23,6 +23,7 @@ public class Route {
   public let headers: Route.Headers?
   public let urlParams: Route.Params
   public let body: Route.Params
+  public var customUrl: URL?
   
   init (endpoint: String, method: Route.Method, headers: Route.Headers? = nil, urlParams: Route.Params = [:], body: Route.Params = [:]) {
     self.endpoint = endpoint
@@ -46,7 +47,7 @@ public class Route {
   }
   
   public func asRequest() throws -> URLRequest {
-    guard var url = makeURL() else { throw NSError(domain: "rolique", code: 700, userInfo: [NSLocalizedFailureReasonErrorKey: "Failed to make url"]) }
+    guard var url = customUrl ?? makeURL() else { throw NSError(domain: "rolique", code: 700, userInfo: [NSLocalizedFailureReasonErrorKey: "Failed to make url"]) }
     if urlParams.keys.count > 0 {
       urlParams.keys.forEach { url = url.appending($0, value: urlParams[$0]) }
     }
@@ -55,7 +56,7 @@ public class Route {
                       timeoutInterval: 30)
     request.allHTTPHeaderFields = headers ?? makeAuthHeaders()
     request.httpMethod = method.value
-    print(Env.slackCliendId, Env.slackCliendSecret)
+    
     return request
   }
 }

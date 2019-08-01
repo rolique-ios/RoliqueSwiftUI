@@ -8,12 +8,13 @@
 
 import Foundation
 
-struct Env {
-  static let apiToken: String = Env.getValueForKey("ApiToken") ?? "no_api_token"
-  static let apiUrl: String = Env.getValueForKey("ApiUrl") ?? "no_api_url"
-  static let slackCliendId = Env.getValueForKey("SlackClientId") ?? "no_slack_client_id"
-  static let slackCliendSecret = Env.getValueForKey("SlackClientSecret") ?? "no_slack_client_secret"
-
+public struct Env {
+  public static let apiToken = Env.getValueForKey("ApiToken") ?? "no_api_token"
+  public static let apiUrl = Env.getValueForKey("ApiUrl") ?? "no_api_url"
+  public static let slackCliendId = Env.getValueForKey("SlackClientId") ?? "no_slack_client_id"
+  public static let slackClientSecret = Env.getValueForKey("SlackClientSecret") ?? "no_slack_client_secret"
+  public static let slackRedirectUri = "https://" + (Env.getValueForKey("SlackRedirectUri") ?? "no_slack_redirect_uri")
+  
   static func getValueForKey(_ key: String) -> String? {
     guard let secret = Bundle.main.infoDictionary?["Secret"] as? [String: Any] else { return nil }
     guard let value = secret[key] as? String else { return nil }

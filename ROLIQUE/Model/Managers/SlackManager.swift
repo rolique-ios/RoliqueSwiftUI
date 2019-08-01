@@ -7,31 +7,44 @@
 //
 
 import UIKit
-import SafariServices
+import Networking
+import AuthenticationServices
 
 public protocol SlackManager {
   func showLogin()
 }
 
-public final class SlackManagerImpl: SlackManager {
-  private let authURL = URL(string: "https://slack.com/oauth/authorize")!
-  private let scope = "identity%3Abasic"
-  private let clientId = ""
+class WindowProvider: NSObject, ASWebAuthenticationPresentationContextProviding {
+  func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+    return presentationAnchor
+  }
   
-  public static let shared = SlackManagerImpl()
-  private var session: SFAuthenticationSession? = nil
+  let presentationAnchor: ASPresentationAnchor
+  
+  init(presentationAnchor: ASPresentationAnchor) {
+    self.presentationAnchor = presentationAnchor
+    super.init()
+  }
+}
 
-
-  // TODO: refactor later
+public final class SlackManagerImpl: SlackManager {
+  
+  let contextProvider: ASWebAuthenticationPresentationContextProviding
+  
+  public init(presentationAnchor: ASPresentationAnchor) {
+    self.contextProvider = WindowProvider(presentationAnchor: presentationAnchor)
+  }
+  
+  private var session: ASWebAuthenticationSession?
+  
   public func showLogin() {
-    let url = URL(string: authURL.absoluteString + "?client_id=\(clientId)&scope=users:read&redirect_uri=rolique://")!
-    let callbackUrlScheme = "rolique://"
-    print("\(url.absoluteString)")
-    
-    session = SFAuthenticationSession(
+    let route = SlackLogin()
+    guard let url = try? route.asRequest().url else { return }
+    session = ASWebAuthenticationSession(
         url: url,
-        callbackURLScheme: callbackUrlScheme,
+        callbackURLScheme: "rolique://",
         completionHandler: {(callbackURL, error) in
+          print(error, callbackURL)
             if error == nil {
                 let query = callbackURL?.query?.components(separatedBy: "=")
                 if query![0] == "code" {
@@ -40,17 +53,8 @@ public final class SlackManagerImpl: SlackManager {
               }
             }
     })
-    
+    session?.presentationContextProvider = contextProvider
     session?.start()
   }
   
-  private func getAccessToken(code: String) {
-
-  //      Alamofire.request( SLACK_OAUTH_URL + "?client_id=\(env["SLACK_CLIENT_ID"]!)&client_secret=\(env["SLACK_CLIENT_SECRET"]!)&code=\(code)").responseJSON{
-//          response in
-//          let json = JSON(response.result.value!)
-//          print("access_token:\(json["access_token"])")
-//          RealmUserDataManager().setData(slackAccessToken: json["access_token"].description, hId: nil, hIdentifier: nil)
-//      }
-  }
 }

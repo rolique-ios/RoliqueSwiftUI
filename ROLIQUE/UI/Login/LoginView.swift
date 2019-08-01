@@ -9,6 +9,8 @@
 import UIKit
 import Utils
 import SwiftUI
+import Model
+import AuthenticationServices
 
 private struct Constants {
   static var logoSize: CGSize { return CGSize(width: 150, height: 150) }
@@ -18,6 +20,8 @@ private struct Constants {
 
 public struct LoginView: View {
   private let viewModel: LoginViewModel
+  let sm: SlackManager = SlackManagerImpl(presentationAnchor: UIApplication.shared.windows[0])
+
   
   public init(viewModel: LoginViewModel) {
     self.viewModel = viewModel
@@ -39,7 +43,7 @@ public struct LoginView: View {
 private extension LoginView {
   func composeSlackButton() -> some View {
     Button(action: {
-      self.viewModel.login()
+      self.sm.showLogin()
     }) {
       Images.Login.slackButton
         .renderingMode(.original)

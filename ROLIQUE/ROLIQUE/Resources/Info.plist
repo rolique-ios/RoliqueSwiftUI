@@ -4,14 +4,16 @@
 <dict>
 	<key>Secret</key>
 	<dict>
-		<key>SlackClientId</key>
-		<string>$(SLACK_CLIENT_ID)</string>
-		<key>ApiUrl</key>
-		<string>$(API_URL)</string>
 		<key>SlackClientSecret</key>
 		<string>$(SLACK_CLIENT_SECRET)</string>
 		<key>ApiToken</key>
 		<string>$(API_TOKEN)</string>
+		<key>ApiUrl</key>
+		<string>$(API_URL)</string>
+		<key>SlackClientId</key>
+		<string>$(SLACK_CLIENT_ID)</string>
+		<key>SlackRedirectUri</key>
+		<string>$(SLACK_REDIRECT_URI)</string>
 	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
@@ -27,19 +29,6 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string></string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>rolique</string>
-			</array>
-		</dict>
-	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
