@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import Model
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    Action.Late.fromNow(value: "6_hs", sender: "U1TRSDJSY", onSuccess: { result in print(result) }, onError: { error in print(error) })
+    
+    
     return true
   }
   
@@ -23,9 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
   }
   
+  func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+   print("nice1")
+
+    print("app handleOpen", url)
+    return true
+  }
+  
   func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-    
+    print("nice2")
+    print("app delegate", url)
     return true
   }
 }
-

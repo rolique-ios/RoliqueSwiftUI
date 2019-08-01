@@ -17,6 +17,8 @@
 		2543E47222F37B1F00C85D1E /* OKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2543E47122F37B1F00C85D1E /* OKAlert.swift */; };
 		2543E47422F37C5800C85D1E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2543E47322F37C5800C85D1E /* Strings.swift */; };
 		2543E47622F37E8E00C85D1E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2543E47522F37E8E00C85D1E /* String.swift */; };
+		2543E47A22F384C300C85D1E /* release.rolique.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2543E47822F384C300C85D1E /* release.rolique.xcconfig */; };
+		2543E47B22F384C300C85D1E /* debug.rolque.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2543E47922F384C300C85D1E /* debug.rolque.xcconfig */; };
 		254ADA3622F1DD9800B24B52 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427822F1A0F000343F96 /* LoginView.swift */; };
 		254ADA3722F1DD9800B24B52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427C22F1B5E300343F96 /* LoginViewModel.swift */; };
 		254ADA3A22F1DDA300B24B52 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE90D22F1CD7D0014A500 /* ViewModel.swift */; };
@@ -34,7 +36,7 @@
 		254DE9BB22F1DD3B0014A500 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 254DE9B322F1DD3A0014A500 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		254DE9BF22F1DD4D0014A500 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE91222F1D0220014A500 /* Colors.swift */; };
 		2592633722F2CDD900345F63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225EF22F195DA00098DA6 /* AppDelegate.swift */; };
-		2592633922F2CDEE00345F63 /* SlackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252821A122F20E2800D384DE /* SlackManager.swift */; };
+		2592633922F2CDEE00345F63 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252821A122F20E2800D384DE /* LoginManager.swift */; };
 		2592633B22F2D84D00345F63 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592633A22F2D84D00345F63 /* Images.swift */; };
 		25BFDD4D22F2E57F00006591 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BFDD4C22F2E57F00006591 /* TabBarView.swift */; };
 		25BFDD5222F2E61800006591 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BFDD5122F2E61800006591 /* StatsView.swift */; };
@@ -55,6 +57,9 @@
 		B57B34D322F2AF9300E6A4F6 /* ActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B34D222F2AF9300E6A4F6 /* ActionResult.swift */; };
 		B57B34D522F2B3D100E6A4F6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B34D422F2B3D100E6A4F6 /* User.swift */; };
 		B57B34D922F2D06A00E6A4F6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B34D822F2D06A00E6A4F6 /* Model.swift */; };
+		B5AF05C422F2FCD3005B22E8 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05C322F2FCD3005B22E8 /* Env.swift */; };
+		B5AF05C622F3040A005B22E8 /* SlackLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05C522F3040A005B22E8 /* SlackLogin.swift */; };
+		B5AF05DD22F31FA9005B22E8 /* ROLIQUETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05DC22F31FA9005B22E8 /* ROLIQUETests.swift */; };
 		B5E564F522F2D3A900733CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225EF22F195DA00098DA6 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +92,13 @@
 			remoteGlobalIDString = 254DE9B222F1DD3A0014A500;
 			remoteInfo = Model;
 		};
+		B5AF05DF22F31FA9005B22E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25E225E422F195DA00098DA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25E225EB22F195DA00098DA6;
+			remoteInfo = ROLIQUE;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -111,13 +123,15 @@
 		2515BD5A22F1FBBB00285B40 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2528219C22F2080200D384DE /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
 		2528219E22F208D900D384DE /* UserDefaulsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaulsHelper.swift; sourceTree = "<group>"; };
-		252821A122F20E2800D384DE /* SlackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackManager.swift; sourceTree = "<group>"; };
+		252821A122F20E2800D384DE /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		2543E46B22F362E700C85D1E /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		2543E46D22F3630F00C85D1E /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		2543E46F22F3631A00C85D1E /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		2543E47122F37B1F00C85D1E /* OKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKAlert.swift; sourceTree = "<group>"; };
 		2543E47322F37C5800C85D1E /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2543E47522F37E8E00C85D1E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		2543E47822F384C300C85D1E /* release.rolique.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.rolique.xcconfig; sourceTree = "<group>"; };
+		2543E47922F384C300C85D1E /* debug.rolque.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.rolque.xcconfig; sourceTree = "<group>"; };
 		254ADA5222F1DEE000B24B52 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		254ADA5422F1DEE000B24B52 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		254ADA5522F1DEE000B24B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,6 +170,11 @@
 		B57B34D222F2AF9300E6A4F6 /* ActionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionResult.swift; sourceTree = "<group>"; };
 		B57B34D422F2B3D100E6A4F6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B57B34D822F2D06A00E6A4F6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B5AF05C322F2FCD3005B22E8 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
+		B5AF05C522F3040A005B22E8 /* SlackLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackLogin.swift; sourceTree = "<group>"; };
+		B5AF05DA22F31FA9005B22E8 /* ROLIQUETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ROLIQUETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AF05DC22F31FA9005B22E8 /* ROLIQUETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROLIQUETests.swift; sourceTree = "<group>"; };
+		B5AF05DE22F31FA9005B22E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +217,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5AF05D722F31FA9005B22E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -225,7 +251,7 @@
 		252821A022F20E1B00D384DE /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				252821A122F20E2800D384DE /* SlackManager.swift */,
+				252821A122F20E2800D384DE /* LoginManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -233,8 +259,9 @@
 		254ADA5322F1DEE000B24B52 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B5AF05C322F2FCD3005B22E8 /* Env.swift */,
 				B57B34BD22F1E3D300E6A4F6 /* Transport */,
-				B57B34BC22F1E3C000E6A4F6 /* Router */,
+				B57B34BC22F1E3C000E6A4F6 /* Routes */,
 				254ADA5422F1DEE000B24B52 /* Networking.h */,
 				254ADA5522F1DEE000B24B52 /* Info.plist */,
 			);
@@ -325,11 +352,13 @@
 		25E225E322F195DA00098DA6 = {
 			isa = PBXGroup;
 			children = (
+				B53D758E22F2E0EF003E7B9C /* BuildConfig */,
 				25E225EE22F195DA00098DA6 /* ROLIQUE */,
 				254DE98122F1DD040014A500 /* UI */,
 				254DE9A322F1DD240014A500 /* Utils */,
 				254DE9B422F1DD3B0014A500 /* Model */,
 				254ADA5322F1DEE000B24B52 /* Networking */,
+				B5AF05DB22F31FA9005B22E8 /* ROLIQUETests */,
 				25E225ED22F195DA00098DA6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -342,6 +371,7 @@
 				254DE9A222F1DD240014A500 /* Utils.framework */,
 				254DE9B322F1DD3A0014A500 /* Model.framework */,
 				254ADA5222F1DEE000B24B52 /* Networking.framework */,
+				B5AF05DA22F31FA9005B22E8 /* ROLIQUETests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -379,13 +409,24 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		B57B34BC22F1E3C000E6A4F6 /* Router */ = {
+		B53D758E22F2E0EF003E7B9C /* BuildConfig */ = {
+			isa = PBXGroup;
+			children = (
+				2543E47922F384C300C85D1E /* debug.rolque.xcconfig */,
+				2543E47822F384C300C85D1E /* release.rolique.xcconfig */,
+			);
+			name = BuildConfig;
+			path = ../BuildConfig;
+			sourceTree = "<group>";
+		};
+		B57B34BC22F1E3C000E6A4F6 /* Routes */ = {
 			isa = PBXGroup;
 			children = (
 				B57B34C022F1E4BB00E6A4F6 /* Route.swift */,
+				B5AF05C522F3040A005B22E8 /* SlackLogin.swift */,
 				B57B34C622F226DC00E6A4F6 /* Commands */,
 			);
-			path = Router;
+			path = Routes;
 			sourceTree = "<group>";
 		};
 		B57B34BD22F1E3D300E6A4F6 /* Transport */ = {
@@ -422,6 +463,15 @@
 				B57B34D422F2B3D100E6A4F6 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B5AF05DB22F31FA9005B22E8 /* ROLIQUETests */ = {
+			isa = PBXGroup;
+			children = (
+				B5AF05DC22F31FA9005B22E8 /* ROLIQUETests.swift */,
+				B5AF05DE22F31FA9005B22E8 /* Info.plist */,
+			);
+			path = ROLIQUETests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,6 +608,24 @@
 			productReference = 25E225EC22F195DA00098DA6 /* ROLIQUE.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B5AF05D922F31FA9005B22E8 /* ROLIQUETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5AF05E122F31FA9005B22E8 /* Build configuration list for PBXNativeTarget "ROLIQUETests" */;
+			buildPhases = (
+				B5AF05D622F31FA9005B22E8 /* Sources */,
+				B5AF05D722F31FA9005B22E8 /* Frameworks */,
+				B5AF05D822F31FA9005B22E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5AF05E022F31FA9005B22E8 /* PBXTargetDependency */,
+			);
+			name = ROLIQUETests;
+			productName = ROLIQUETests;
+			productReference = B5AF05DA22F31FA9005B22E8 /* ROLIQUETests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -566,7 +634,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = "Bohdan Savych";
+				ORGANIZATIONNAME = ROLIQUE;
 				TargetAttributes = {
 					254ADA5122F1DEE000B24B52 = {
 						CreatedOnToolsVersion = 11.0;
@@ -584,6 +652,10 @@
 					};
 					25E225EB22F195DA00098DA6 = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					B5AF05D922F31FA9005B22E8 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 25E225EB22F195DA00098DA6;
 					};
 				};
 			};
@@ -607,6 +679,7 @@
 				254DE9A122F1DD240014A500 /* Utils */,
 				254DE9B222F1DD3A0014A500 /* Model */,
 				254ADA5122F1DEE000B24B52 /* Networking */,
+				B5AF05D922F31FA9005B22E8 /* ROLIQUETests */,
 			);
 		};
 /* End PBXProject section */
@@ -647,6 +720,15 @@
 				25E225FC22F195DC00098DA6 /* LaunchScreen.storyboard in Resources */,
 				25E225F922F195DC00098DA6 /* Preview Assets.xcassets in Resources */,
 				25E225F622F195DC00098DA6 /* Assets.xcassets in Resources */,
+				2543E47A22F384C300C85D1E /* release.rolique.xcconfig in Resources */,
+				2543E47B22F384C300C85D1E /* debug.rolque.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AF05D822F31FA9005B22E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +742,8 @@
 				B57B34C122F1E4BB00E6A4F6 /* Route.swift in Sources */,
 				B57B34D122F23FBC00E6A4F6 /* Json.swift in Sources */,
 				B57B34C322F1F73D00E6A4F6 /* Late.swift in Sources */,
+				B5AF05C622F3040A005B22E8 /* SlackLogin.swift in Sources */,
+				B5AF05C422F2FCD3005B22E8 /* Env.swift in Sources */,
 				B57B34BF22F1E42100E6A4F6 /* Net.swift in Sources */,
 				B57B34C522F1F7E000E6A4F6 /* Command.swift in Sources */,
 			);
@@ -704,7 +788,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2592633922F2CDEE00345F63 /* SlackManager.swift in Sources */,
+				2592633922F2CDEE00345F63 /* LoginManager.swift in Sources */,
 				B57B34D322F2AF9300E6A4F6 /* ActionResult.swift in Sources */,
 				B57B34C822F2297200E6A4F6 /* DataProvider.swift in Sources */,
 				B57B34D522F2B3D100E6A4F6 /* User.swift in Sources */,
@@ -720,6 +804,14 @@
 				25E225F222F195DA00098DA6 /* SceneDelegate.swift in Sources */,
 				B5E564F522F2D3A900733CC6 /* AppDelegate.swift in Sources */,
 				25E225F222F195DA00098DA6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AF05D622F31FA9005B22E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AF05DD22F31FA9005B22E8 /* ROLIQUETests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,6 +837,11 @@
 			isa = PBXTargetDependency;
 			target = 254DE9B222F1DD3A0014A500 /* Model */;
 			targetProxy = 254DE9B822F1DD3B0014A500 /* PBXContainerItemProxy */;
+		};
+		B5AF05E022F31FA9005B22E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25E225EB22F195DA00098DA6 /* ROLIQUE */;
+			targetProxy = B5AF05DF22F31FA9005B22E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1138,6 +1235,46 @@
 			};
 			name = Release;
 		};
+		B5AF05E222F31FA9005B22E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZL58JZZ8KD;
+				INFOPLIST_FILE = ROLIQUETests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.rolique.ROLIQUETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ROLIQUE.app/ROLIQUE";
+			};
+			name = Debug;
+		};
+		B5AF05E322F31FA9005B22E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZL58JZZ8KD;
+				INFOPLIST_FILE = ROLIQUETests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.rolique.ROLIQUETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ROLIQUE.app/ROLIQUE";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1191,6 +1328,15 @@
 			buildConfigurations = (
 				25E2260122F195DC00098DA6 /* Debug */,
 				25E2260222F195DC00098DA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5AF05E122F31FA9005B22E8 /* Build configuration list for PBXNativeTarget "ROLIQUETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5AF05E222F31FA9005B22E8 /* Debug */,
+				B5AF05E322F31FA9005B22E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

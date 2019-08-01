@@ -3,23 +3,16 @@
 //  Networking
 //
 //  Created by Andrii on 7/31/19.
-//  Copyright © 2019 Bohdan Savych. All rights reserved.
+//  Copyright © 2019 ROLIQUE. All rights reserved.
 //
 
 import Foundation
 
 public class Route {
-  
-  struct Constants {
-    static let baseApiPath = "https://roliqbot.appspot.com/api/"
-    static let authHeaders: Headers = ["token": ProcessInfo.processInfo.environment["ROLIQUE_API_TOKEN"] ?? "no token"]
-  }
-  
+
   public enum Method: String {
     case get, post, put, patch, delete
-    var value: String {
-      return self.rawValue.uppercased()
-    }
+    var value: String { self.rawValue.uppercased() }
   }
   
   public typealias Headers = [String: String]
@@ -27,11 +20,12 @@ public class Route {
   
   public let endpoint: String
   public let method: Route.Method
-  public let headers: Route.Headers
+  public let headers: Route.Headers?
   public let urlParams: Route.Params
   public let body: Route.Params
+  public var customUrl: URL?
   
-  init (endpoint: String, method: Route.Method, headers: Route.Headers = Constants.authHeaders, urlParams: Route.Params = [:], body: Route.Params = [:]) {
+  init (endpoint: String, method: Route.Method, headers: Route.Headers? = nil, urlParams: Route.Params = [:], body: Route.Params = [:]) {
     self.endpoint = endpoint
     self.method = method
     self.headers = headers
@@ -40,19 +34,29 @@ public class Route {
   }
   
   private func makeURL() -> URL? {
-    return URL(string: Route.Constants.baseApiPath + endpoint)
+    let urlString = "https://" + Env.apiUrl + endpoint
+    let url = URL(string: urlString)
+    return url
+  }
+  
+  private func makeAuthHeaders() -> Headers {
+    return [
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "token": Env.apiToken]
   }
   
   public func asRequest() throws -> URLRequest {
-    guard var url = makeURL() else { throw NSError(domain: "rolique", code: 700, userInfo: [NSLocalizedFailureReasonErrorKey: "Failed to make url"]) }
+    guard var url = customUrl ?? makeURL() else { throw NSError(domain: "rolique", code: 700, userInfo: [NSLocalizedFailureReasonErrorKey: "Failed to make url"]) }
     if urlParams.keys.count > 0 {
       urlParams.keys.forEach { url = url.appending($0, value: urlParams[$0]) }
     }
     var request = URLRequest(url: url,
                       cachePolicy: URLRequest.CachePolicy.useProtocolCachePolicy,
                       timeoutInterval: 30)
-    request.allHTTPHeaderFields = headers
+    request.allHTTPHeaderFields = headers ?? makeAuthHeaders()
     request.httpMethod = method.value
+    
     return request
   }
 }

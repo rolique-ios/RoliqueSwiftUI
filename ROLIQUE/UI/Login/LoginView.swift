@@ -8,6 +8,8 @@
 
 import Utils
 import SwiftUI
+import Model
+import AuthenticationServices
 
 private struct Constants {
   static var logoSize: CGSize { return CGSize(width: 150, height: 150) }
