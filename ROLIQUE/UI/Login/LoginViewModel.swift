@@ -13,6 +13,7 @@ public protocol LoginViewModel: ViewModel {
 }
 
 public final class LoginViewModelImpl: LoginViewModel {
+  public init() {}
   public func login() {
     
   }
