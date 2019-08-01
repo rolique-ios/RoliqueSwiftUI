@@ -13,5 +13,5 @@ public protocol LoginViewModel: ViewModel {
 }
 
 public final class LoginViewModelImpl: LoginViewModel {
-  
+  public init() {}
 }

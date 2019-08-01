@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import Utils
 
 public struct LoginView: View {
   private let viewModel: LoginViewModel
@@ -17,10 +18,16 @@ public struct LoginView: View {
   }
   
   public var body: some View {
-    Group {
-      ZStack {
-        Colors.Login.backgroundColor.edgesIgnoringSafeArea(.all)
-      }
+    ZStack {
+      Colors.Login.backgroundColor.edgesIgnoringSafeArea(.all)
+      self.composeSlackButton()
+    }
+  }
+  
+  func composeSlackButton() -> Button<Text> {
+    Button(action: {
+    }) {
+      Text("Slock Log In")
     }
   }
 }
