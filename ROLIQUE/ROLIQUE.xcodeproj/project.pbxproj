@@ -125,8 +125,8 @@
 		25E225FD22F195DC00098DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25FC427822F1A0F000343F96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		25FC427C22F1B5E300343F96 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		B53D758F22F2E143003E7B9C /* debug.rolque.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.rolque.xcconfig; sourceTree = "<group>"; };
 		B53D759022F2E1FB003E7B9C /* release.rolique.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.rolique.xcconfig; sourceTree = "<group>"; };
+		B561C4AB22F2F26000ADB8FE /* debug.rolque.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.rolque.xcconfig; sourceTree = "<group>"; };
 		B57B34BE22F1E42100E6A4F6 /* Net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
 		B57B34C022F1E4BB00E6A4F6 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		B57B34C222F1F73D00E6A4F6 /* Late.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Late.swift; sourceTree = "<group>"; };
@@ -328,8 +328,8 @@
 		B53D758E22F2E0EF003E7B9C /* BuildConfig */ = {
 			isa = PBXGroup;
 			children = (
-				B53D758F22F2E143003E7B9C /* debug.rolque.xcconfig */,
 				B53D759022F2E1FB003E7B9C /* release.rolique.xcconfig */,
+				B561C4AB22F2F26000ADB8FE /* debug.rolque.xcconfig */,
 			);
 			path = BuildConfig;
 			sourceTree = "<group>";
@@ -928,7 +928,7 @@
 		};
 		25E225FE22F195DC00098DA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B53D758F22F2E143003E7B9C /* debug.rolque.xcconfig */;
+			baseConfigurationReference = B561C4AB22F2F26000ADB8FE /* debug.rolque.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

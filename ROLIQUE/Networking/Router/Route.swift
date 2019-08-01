@@ -9,12 +9,7 @@
 import Foundation
 
 public class Route {
-  
-//  struct Constants {
-//    static let baseApiPath = Bundle.main.infoDictionary?["ApiUrl"] as? String ?? "no token"
-//    static let authHeaders: Headers = ["token": Bundle.main.infoDictionary?["ApiToken"] as? String ?? "no token"]
-//  }
-  
+
   public enum Method: String {
     case get, post, put, patch, delete
     var value: String { self.rawValue.uppercased() }
@@ -46,7 +41,10 @@ public class Route {
   
   private func makeAuthHeaders() -> Headers {
     let token = Bundle.main.infoDictionary?["ApiToken"] as? String ?? "no_token"
-    return ["token": token]
+    return [
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "token": token]
   }
   
   public func asRequest() throws -> URLRequest {
