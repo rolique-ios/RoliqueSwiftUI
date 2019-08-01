@@ -25,7 +25,6 @@ class ROLIQUETests: XCTestCase {
     XCTAssert(Env.slackCliendId != "no_slack_client_id", "bad slackCliendId")
     XCTAssert(Env.slackClientSecret != "no_slack_client_secret", "bad slackClientSecret")
     XCTAssert(Env.slackRedirectUri != "https://no_slack_redirect_uri", "bad slackRedirectUri")
-    //XCTAssert(Env.slackToken != "no_slack_token", "bad slackToken")
   }
   
   func testPerformanceExample() {

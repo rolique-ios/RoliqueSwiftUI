@@ -3,7 +3,7 @@
 //  Networking
 //
 //  Created by Andrii on 7/31/19.
-//  Copyright © 2019 Bohdan Savych. All rights reserved.
+//  Copyright © 2019 ROLIQUE. All rights reserved.
 //
 
 import Foundation

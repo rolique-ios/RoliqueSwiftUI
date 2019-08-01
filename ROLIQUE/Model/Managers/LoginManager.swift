@@ -1,17 +1,17 @@
 //
-//  SlackManager.swift
+//  LoginManager.swift
 //  Model
 //
 //  Created by Bohdan Savych on 7/31/19.
-//  Copyright © 2019 Bohdan Savych. All rights reserved.
+//  Copyright © 2019 ROLIQUE. All rights reserved.
 //
 
 import UIKit
 import Networking
 import AuthenticationServices
 
-public protocol SlackManager {
-  func showLogin(userSlackIdResult: ((String) -> Void)?, errorResult: ((Error) -> Void)?)
+public protocol LoginManager {
+  func login(userSlackIdResult: ((String?) -> Void)?)
 }
 
 class WindowProvider: NSObject, ASWebAuthenticationPresentationContextProviding {
@@ -27,7 +27,7 @@ class WindowProvider: NSObject, ASWebAuthenticationPresentationContextProviding 
   }
 }
 
-public final class SlackManagerImpl: SlackManager {
+public final class SlackManagerImpl: LoginManager {
   
   let contextProvider: ASWebAuthenticationPresentationContextProviding
   
@@ -37,9 +37,8 @@ public final class SlackManagerImpl: SlackManager {
   
   private var session: ASWebAuthenticationSession?
   
-  public func showLogin(userSlackIdResult: ((String) -> Void)?, errorResult: ((Error) -> Void)?) {
-    let route = SlackLogin()
-    guard let url = try? route.asRequest().url else { return }
+  public func login(userSlackIdResult: ((String?) -> Void)?) {
+    guard let url = try? SlackLogin().asRequest().url else { return }
     
     session = ASWebAuthenticationSession(
         url: url,
@@ -48,14 +47,17 @@ public final class SlackManagerImpl: SlackManager {
             if error == nil {
                 let query = callbackURL?.query?.components(separatedBy: "=")
                 if query![0] == "code" {
-                  let accessCode = query![1]
-                  let route = SlackToken(code: accessCode)
-                  Net.Worker.request(route, onSuccess: { json in
-                    guard let userSlackId = Json.get(json: json, keyPath: "user/id") as? String else {
+                  let code = query![1]
+                  Net.Worker.request(SlackToken(code: code), onSuccess: { json in
+                    guard let userSlackId = json.string("user/id") else {
+                      print("failed to get string value by keypath: user/id")
+                      userSlackIdResult?(nil)
                       return
                     }
                     userSlackIdResult?(userSlackId)
-                  }, onError: { error in errorResult?(error) })
+                  }, onError: { error in
+                    print(error)
+                    userSlackIdResult?(nil) })
               }
           }
     })

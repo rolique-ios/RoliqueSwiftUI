@@ -28,7 +28,7 @@
 		254DE9BB22F1DD3B0014A500 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 254DE9B322F1DD3A0014A500 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		254DE9BF22F1DD4D0014A500 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE91222F1D0220014A500 /* Colors.swift */; };
 		2592633722F2CDD900345F63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225EF22F195DA00098DA6 /* AppDelegate.swift */; };
-		2592633922F2CDEE00345F63 /* SlackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252821A122F20E2800D384DE /* SlackManager.swift */; };
+		2592633922F2CDEE00345F63 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252821A122F20E2800D384DE /* LoginManager.swift */; };
 		2592633B22F2D84D00345F63 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592633A22F2D84D00345F63 /* Images.swift */; };
 		25E225F022F195DA00098DA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225EF22F195DA00098DA6 /* AppDelegate.swift */; };
 		25E225F222F195DA00098DA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225F122F195DA00098DA6 /* SceneDelegate.swift */; };
@@ -110,7 +110,7 @@
 		2515BD5A22F1FBBB00285B40 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2528219C22F2080200D384DE /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
 		2528219E22F208D900D384DE /* UserDefaulsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaulsHelper.swift; sourceTree = "<group>"; };
-		252821A122F20E2800D384DE /* SlackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackManager.swift; sourceTree = "<group>"; };
+		252821A122F20E2800D384DE /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		254ADA5222F1DEE000B24B52 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		254ADA5422F1DEE000B24B52 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		254ADA5522F1DEE000B24B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 		252821A022F20E1B00D384DE /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				252821A122F20E2800D384DE /* SlackManager.swift */,
+				252821A122F20E2800D384DE /* LoginManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -715,7 +715,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2592633922F2CDEE00345F63 /* SlackManager.swift in Sources */,
+				2592633922F2CDEE00345F63 /* LoginManager.swift in Sources */,
 				B57B34D322F2AF9300E6A4F6 /* ActionResult.swift in Sources */,
 				B57B34C822F2297200E6A4F6 /* DataProvider.swift in Sources */,
 				B57B34D522F2B3D100E6A4F6 /* User.swift in Sources */,

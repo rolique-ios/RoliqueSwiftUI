@@ -3,7 +3,7 @@
 //  ROLIQUE
 //
 //  Created by Andrii on 7/31/19.
-//  Copyright © 2019 Bohdan Savych. All rights reserved.
+//  Copyright © 2019 ROLIQUE. All rights reserved.
 //
 
 import Foundation
@@ -13,10 +13,28 @@ public struct Json: Codable {
 }
 
 public extension Json {
+  func string(_ keyPath: String) -> String? {
+    return Json.get(json: self, keyPath: keyPath) as? String
+  }
+  
+  func int(_ keyPath: String) -> Int? {
+    return Json.get(json: self, keyPath: keyPath) as? Int
+  }
+  
+  func bool(_ keyPath: String) -> Bool? {
+    return Json.get(json: self, keyPath: keyPath) as? Bool
+  }
+  
+  func float(_ keyPath: String) -> Float? {
+    return Json.get(json: self, keyPath: keyPath) as? Float
+  }
+  
+  func any(_ keyPath: String) -> Any? {
+    return Json.get(json: self, keyPath: keyPath)
+  }
+  
   static func parse(_ jsonString: String) -> [String: Any]? {
-    guard let data = jsonString.data(using: .utf8) else {
-      return nil
-    }
+    guard let data = jsonString.data(using: .utf8) else { return nil }
     return try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
   }
   

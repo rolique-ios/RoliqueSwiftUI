@@ -20,7 +20,7 @@ private struct Constants {
 
 public struct LoginView: View {
   private let viewModel: LoginViewModel
-  let sm: SlackManager = SlackManagerImpl(presentationAnchor: UIApplication.shared.windows[0])
+  let sm: LoginManager = SlackManagerImpl(presentationAnchor: UIApplication.shared.windows[0])
 
   
   public init(viewModel: LoginViewModel) {
@@ -43,7 +43,7 @@ public struct LoginView: View {
 private extension LoginView {
   func composeSlackButton() -> some View {
     Button(action: {
-      self.sm.showLogin(userSlackIdResult: { slackId in print("slack id", slackId) }, errorResult: { err in print(err) })
+      self.sm.login(userSlackIdResult: { slackId in print("slack id", slackId) })
     }) {
       Images.Login.slackButton
         .renderingMode(.original)
