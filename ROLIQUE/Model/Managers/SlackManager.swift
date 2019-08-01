@@ -11,7 +11,7 @@ import Networking
 import AuthenticationServices
 
 public protocol SlackManager {
-  func showLogin()
+  func showLogin(userSlackIdResult: ((String) -> Void)?, errorResult: ((Error) -> Void)?)
 }
 
 class WindowProvider: NSObject, ASWebAuthenticationPresentationContextProviding {
@@ -37,21 +37,27 @@ public final class SlackManagerImpl: SlackManager {
   
   private var session: ASWebAuthenticationSession?
   
-  public func showLogin() {
+  public func showLogin(userSlackIdResult: ((String) -> Void)?, errorResult: ((Error) -> Void)?) {
     let route = SlackLogin()
     guard let url = try? route.asRequest().url else { return }
+    
     session = ASWebAuthenticationSession(
         url: url,
         callbackURLScheme: "rolique://",
         completionHandler: {(callbackURL, error) in
-          print(error, callbackURL)
             if error == nil {
                 let query = callbackURL?.query?.components(separatedBy: "=")
                 if query![0] == "code" {
                   let accessCode = query![1]
-                  print("\(accessCode)")
+                  let route = SlackToken(code: accessCode)
+                  Net.Worker.request(route, onSuccess: { json in
+                    guard let userSlackId = Json.get(json: json, keyPath: "user/id") as? String else {
+                      return
+                    }
+                    userSlackIdResult?(userSlackId)
+                  }, onError: { error in errorResult?(error) })
               }
-            }
+          }
     })
     session?.presentationContextProvider = contextProvider
     session?.start()

@@ -19,4 +19,23 @@ public extension Json {
     }
     return try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
   }
+  
+  static func get(json: Json, keyPath: String) -> Any? {
+    guard let parsed = Json.parse(json.stringValue) else { return nil }
+    return Json.get(dict: parsed, keyPath: keyPath)
+  }
+  
+  static func get(dict: [String: Any], keyPath: String) -> Any? {
+    if keyPath.contains("/") {
+      var parts = keyPath.split(separator: "/")
+      let first = String(parts.removeFirst())
+      if let subDict = dict[first] as? [String: Any] {
+        return Json.get(dict: subDict, keyPath: parts.joined(separator: "/"))
+      } else {
+        return dict[first]
+      }
+    } else {
+      return dict[keyPath]
+    }
+  }
 }

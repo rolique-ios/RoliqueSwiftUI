@@ -43,7 +43,7 @@ public struct LoginView: View {
 private extension LoginView {
   func composeSlackButton() -> some View {
     Button(action: {
-      self.sm.showLogin()
+      self.sm.showLogin(userSlackIdResult: { slackId in print("slack id", slackId) }, errorResult: { err in print(err) })
     }) {
       Images.Login.slackButton
         .renderingMode(.original)

@@ -19,3 +19,16 @@ public final class SlackLogin: Route {
     self.customUrl = URL(string: "https://slack.com/oauth/authorize")
   }
 }
+
+public final class SlackToken: Route {
+  public init(code: String) {
+    super.init(endpoint:"", method: .get, urlParams: [
+      "code": code,
+      "client_id": Env.slackCliendId,
+      "client_secret": Env.slackClientSecret,
+      "redirect_uri": Env.slackRedirectUri,
+    ])
+    
+    self.customUrl = URL(string: "https://slack.com/api/oauth.access")
+  }
+}
