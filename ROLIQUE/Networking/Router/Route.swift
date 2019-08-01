@@ -33,18 +33,16 @@ public class Route {
   }
   
   private func makeURL() -> URL? {
-    let apiUrl = Bundle.main.infoDictionary?["ApiUrl"] as? String ?? "no_api_url"
-    let urlString = "https://" + apiUrl + endpoint
+    let urlString = "https://" + Env.apiUrl + endpoint
     let url = URL(string: urlString)
     return url
   }
   
   private func makeAuthHeaders() -> Headers {
-    let token = Bundle.main.infoDictionary?["ApiToken"] as? String ?? "no_token"
     return [
       "Content-Type": "application/json",
       "Accept": "application/json",
-      "token": token]
+      "token": Env.apiToken]
   }
   
   public func asRequest() throws -> URLRequest {
@@ -57,6 +55,7 @@ public class Route {
                       timeoutInterval: 30)
     request.allHTTPHeaderFields = headers ?? makeAuthHeaders()
     request.httpMethod = method.value
+    print(Env.slackCliendId, Env.slackCliendSecret)
     return request
   }
 }

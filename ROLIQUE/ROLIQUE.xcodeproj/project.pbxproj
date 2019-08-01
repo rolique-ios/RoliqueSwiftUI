@@ -44,6 +44,7 @@
 		B57B34D322F2AF9300E6A4F6 /* ActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B34D222F2AF9300E6A4F6 /* ActionResult.swift */; };
 		B57B34D522F2B3D100E6A4F6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B34D422F2B3D100E6A4F6 /* User.swift */; };
 		B57B34D922F2D06A00E6A4F6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B34D822F2D06A00E6A4F6 /* Model.swift */; };
+		B5AF05C422F2FCD3005B22E8 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05C322F2FCD3005B22E8 /* Env.swift */; };
 		B5E564F522F2D3A900733CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225EF22F195DA00098DA6 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		B57B34D222F2AF9300E6A4F6 /* ActionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionResult.swift; sourceTree = "<group>"; };
 		B57B34D422F2B3D100E6A4F6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B57B34D822F2D06A00E6A4F6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B5AF05C322F2FCD3005B22E8 /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 		254ADA5322F1DEE000B24B52 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B5AF05C322F2FCD3005B22E8 /* Env.swift */,
 				B57B34BD22F1E3D300E6A4F6 /* Transport */,
 				B57B34BC22F1E3C000E6A4F6 /* Router */,
 				254ADA5422F1DEE000B24B52 /* Networking.h */,
@@ -615,6 +618,7 @@
 				B57B34C122F1E4BB00E6A4F6 /* Route.swift in Sources */,
 				B57B34D122F23FBC00E6A4F6 /* Json.swift in Sources */,
 				B57B34C322F1F73D00E6A4F6 /* Late.swift in Sources */,
+				B5AF05C422F2FCD3005B22E8 /* Env.swift in Sources */,
 				B57B34BF22F1E42100E6A4F6 /* Net.swift in Sources */,
 				B57B34C522F1F7E000E6A4F6 /* Command.swift in Sources */,
 			);

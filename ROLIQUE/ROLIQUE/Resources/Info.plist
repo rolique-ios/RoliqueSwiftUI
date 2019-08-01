@@ -2,12 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>ApiUrl</key>
-	<string>$(API_URL)</string>
-	<key>ApiToken</key>
-	<string>$(API_TOKEN)</string>
-	<key>Bar</key>
-	<string>$(BAR)</string>
+	<key>Secret</key>
+	<dict>
+		<key>SlackClientId</key>
+		<string>$(SLACK_CLIENT_ID)</string>
+		<key>ApiUrl</key>
+		<string>$(API_URL)</string>
+		<key>SlackClientSecret</key>
+		<string>$(SLACK_CLIENT_SECRET)</string>
+		<key>ApiToken</key>
+		<string>$(API_TOKEN)</string>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
