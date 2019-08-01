@@ -11,7 +11,7 @@ import Networking
 import AuthenticationServices
 
 public protocol LoginManager {
-  func login(userSlackIdResult: ((String?) -> Void)?)
+  func login(result: ((User?) -> Void)?)
 }
 
 class WindowProvider: NSObject, ASWebAuthenticationPresentationContextProviding {
@@ -37,7 +37,7 @@ public final class SlackManagerImpl: LoginManager {
   
   private var session: ASWebAuthenticationSession?
   
-  public func login(userSlackIdResult: ((String?) -> Void)?) {
+  public func login(result: ((User?) -> Void)?) {
     guard let url = try? SlackLogin().asRequest().url else { return }
     
     session = ASWebAuthenticationSession(
@@ -50,14 +50,17 @@ public final class SlackManagerImpl: LoginManager {
             let code = query![1]
             Net.Worker.request(SlackToken(code: code), onSuccess: { jsonResult in
               guard let userSlackId = jsonResult.string("user/id") else {
+                
                 print("failed to get string value by keypath: user/id")
-                userSlackIdResult?(nil)
+                result?(nil)
                 return
               }
-              userSlackIdResult?(userSlackId)
+              let user = User(id: userSlackId)
+              dump(user)
+              result?(user)
             }, onError: { error in
               print(error)
-              userSlackIdResult?(nil) })
+              result?(nil) })
           }
         }
     })

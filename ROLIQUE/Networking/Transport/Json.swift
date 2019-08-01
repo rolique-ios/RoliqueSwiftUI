@@ -13,10 +13,11 @@ public struct Json: Codable {
 }
 
 public extension Json {
+  var error: String? { string("error") }
+  
   func json(_ keyPath: String) -> Json? {
     guard let dict = self.dict(keyPath) else { return nil }
-    guard let data = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted) else { return nil }
-    guard let jsonString = String(data: data, encoding: .utf8) else { return nil }
+    guard let jsonString = Json.stringify(dict: dict) else { return nil }
     return Json(stringValue: jsonString)
   }
   
@@ -42,6 +43,12 @@ public extension Json {
   
   func any(_ keyPath: String) -> Any? {
     return Json.get(json: self, keyPath: keyPath)
+  }
+  
+  static func stringify(dict: [String: Any]) -> String? {
+    guard let data = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted) else { return nil }
+    guard let jsonString = String(data: data, encoding: .utf8) else { return nil }
+    return jsonString
   }
   
   static func parse(_ jsonString: String) -> [String: Any]? {

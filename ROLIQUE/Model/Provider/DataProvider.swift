@@ -14,9 +14,9 @@ public struct Action {
    public class Late {}
 }
 
-public struct Fetch<M: Model> {}
+public struct Fetch<M: ModelType> {}
 
-public class FetchArray<A: Model> {}
+public class FetchArray<A: ModelType> {}
 
 public class FetchUsers: FetchArray<User> {}
 
@@ -41,8 +41,8 @@ public extension Action.Late {
   }
   
   static func fromNow(value: String, sender: String, onSuccess: ((ActionResult) -> Void)?, onError: Net.ErrorResult?) {
-    Net.Worker.request(Late(sender: sender, from: .now, value: value, isTest: false), onSuccess: { json in
-      let result = ActionResult(error: Json.parse(json.stringValue)?["error"] as? String)
+    Net.Worker.request(Late(sender: sender, from: .now, value: value, isTest: true), onSuccess: { json in
+      let result = ActionResult(map: Json.parse(json.stringValue))
       onSuccess?(result)
     }, onError: onError)
   }

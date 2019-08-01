@@ -8,10 +8,11 @@
 
 import Foundation
 
-public struct ActionResult: Codable, CustomStringConvertible {
-  var error: String?
+public final class ActionResult: Model, CustomStringConvertible {
+  
   var ok: Bool { return error == nil }
   public var description: String {
     return "ActionResult -> ok: \(ok), error: \(error ?? "nil")"
   }
+
 }
