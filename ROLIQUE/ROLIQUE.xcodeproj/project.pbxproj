@@ -11,7 +11,6 @@
 		2515BD5D22F1FBBB00285B40 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2515BD5A22F1FBBB00285B40 /* Color.swift */; };
 		2528219D22F2080200D384DE /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528219C22F2080200D384DE /* UserDefaultsPropertyWrapper.swift */; };
 		2528219F22F208D900D384DE /* UserDefaulsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528219E22F208D900D384DE /* UserDefaulsHelper.swift */; };
-		252821A222F20E2800D384DE /* SlackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252821A122F20E2800D384DE /* SlackManager.swift */; };
 		254ADA3622F1DD9800B24B52 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427822F1A0F000343F96 /* LoginView.swift */; };
 		254ADA3722F1DD9800B24B52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427C22F1B5E300343F96 /* LoginViewModel.swift */; };
 		254ADA3A22F1DDA300B24B52 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE90D22F1CD7D0014A500 /* ViewModel.swift */; };
@@ -28,6 +27,10 @@
 		254DE9BA22F1DD3B0014A500 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254DE9B322F1DD3A0014A500 /* Model.framework */; };
 		254DE9BB22F1DD3B0014A500 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 254DE9B322F1DD3A0014A500 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		254DE9BF22F1DD4D0014A500 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE91222F1D0220014A500 /* Colors.swift */; };
+		2592633722F2CDD900345F63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225EF22F195DA00098DA6 /* AppDelegate.swift */; };
+		2592633922F2CDEE00345F63 /* SlackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252821A122F20E2800D384DE /* SlackManager.swift */; };
+		2592633B22F2D84D00345F63 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592633A22F2D84D00345F63 /* Images.swift */; };
+		25E225F022F195DA00098DA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225EF22F195DA00098DA6 /* AppDelegate.swift */; };
 		25E225F222F195DA00098DA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225F122F195DA00098DA6 /* SceneDelegate.swift */; };
 		25E225F622F195DC00098DA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E225F522F195DC00098DA6 /* Assets.xcassets */; };
 		25E225F922F195DC00098DA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E225F822F195DC00098DA6 /* Preview Assets.xcassets */; };
@@ -112,6 +115,7 @@
 		254DE9B322F1DD3A0014A500 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		254DE9B522F1DD3B0014A500 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		254DE9B622F1DD3B0014A500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2592633A22F2D84D00345F63 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		25E225EC22F195DA00098DA6 /* ROLIQUE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ROLIQUE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E225EF22F195DA00098DA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25E225F122F195DA00098DA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 			children = (
 				2528219E22F208D900D384DE /* UserDefaulsHelper.swift */,
 				254DE91222F1D0220014A500 /* Colors.swift */,
+				2592633A22F2D84D00345F63 /* Images.swift */,
 				2528219B22F207EB00D384DE /* PropertyWrappers */,
 				2515BD5322F1F87400285B40 /* Extensions */,
 				254DE9A422F1DD240014A500 /* Utils.h */,
@@ -516,7 +521,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = "Bohdan Savych";
+				ORGANIZATIONNAME = ROLIQUE;
 				TargetAttributes = {
 					254ADA5122F1DEE000B24B52 = {
 						CreatedOnToolsVersion = 11.0;
@@ -619,6 +624,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2592633722F2CDD900345F63 /* AppDelegate.swift in Sources */,
 				254ADA3622F1DD9800B24B52 /* LoginView.swift in Sources */,
 				254ADA3A22F1DDA300B24B52 /* ViewModel.swift in Sources */,
 				254ADA3722F1DD9800B24B52 /* LoginViewModel.swift in Sources */,
@@ -630,6 +636,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				254DE9BF22F1DD4D0014A500 /* Colors.swift in Sources */,
+				2592633B22F2D84D00345F63 /* Images.swift in Sources */,
 				2528219D22F2080200D384DE /* UserDefaultsPropertyWrapper.swift in Sources */,
 				2528219F22F208D900D384DE /* UserDefaulsHelper.swift in Sources */,
 				2515BD5722F1F88B00285B40 /* UIColor.swift in Sources */,
@@ -641,11 +648,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2592633922F2CDEE00345F63 /* SlackManager.swift in Sources */,
 				B57B34D322F2AF9300E6A4F6 /* ActionResult.swift in Sources */,
 				B57B34C822F2297200E6A4F6 /* DataProvider.swift in Sources */,
 				B57B34D522F2B3D100E6A4F6 /* User.swift in Sources */,
 				B57B34D922F2D06A00E6A4F6 /* Model.swift in Sources */,
-				252821A222F20E2800D384DE /* SlackManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +660,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E225F022F195DA00098DA6 /* AppDelegate.swift in Sources */,
+				25E225F222F195DA00098DA6 /* SceneDelegate.swift in Sources */,
 				B5E564F522F2D3A900733CC6 /* AppDelegate.swift in Sources */,
 				25E225F222F195DA00098DA6 /* SceneDelegate.swift in Sources */,
 			);

@@ -9,9 +9,12 @@
 import Foundation
 
 public protocol LoginViewModel: ViewModel {
-  
+  func login()
 }
 
 public final class LoginViewModelImpl: LoginViewModel {
   public init() {}
+  public func login() {
+    
+  }
 }
