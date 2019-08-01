@@ -17,10 +17,17 @@ public struct LoginView: View {
   }
   
   public var body: some View {
-    Group {
-      ZStack {
-        Colors.Login.backgroundColor.edgesIgnoringSafeArea(.all)
-      }
+    ZStack {
+      Colors.Login.backgroundColor.edgesIgnoringSafeArea(.all)
+      self.composeSlackButton()
+    }
+  }
+  
+  func composeSlackButton() -> Button<Text> {
+    Button(action: {
+      SlackManagerImpl.shared.showLogin()
+    }) {
+      Text("Slock Log In")
     }
   }
 }
