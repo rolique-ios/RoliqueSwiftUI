@@ -41,25 +41,25 @@ public final class SlackManagerImpl: LoginManager {
     guard let url = try? SlackLogin().asRequest().url else { return }
     
     session = ASWebAuthenticationSession(
-        url: url,
-        callbackURLScheme: "rolique://",
-        completionHandler: {(callbackURL, error) in
-            if error == nil {
-                let query = callbackURL?.query?.components(separatedBy: "=")
-                if query![0] == "code" {
-                  let code = query![1]
-                  Net.Worker.request(SlackToken(code: code), onSuccess: { json in
-                    guard let userSlackId = json.string("user/id") else {
-                      print("failed to get string value by keypath: user/id")
-                      userSlackIdResult?(nil)
-                      return
-                    }
-                    userSlackIdResult?(userSlackId)
-                  }, onError: { error in
-                    print(error)
-                    userSlackIdResult?(nil) })
+      url: url,
+      callbackURLScheme: "rolique://",
+      completionHandler: {(callbackURL, error) in
+        if error == nil {
+          let query = callbackURL?.query?.components(separatedBy: "=")
+          if query![0] == "code" {
+            let code = query![1]
+            Net.Worker.request(SlackToken(code: code), onSuccess: { jsonResult in
+              guard let userSlackId = jsonResult.string("user/id") else {
+                print("failed to get string value by keypath: user/id")
+                userSlackIdResult?(nil)
+                return
               }
+              userSlackIdResult?(userSlackId)
+            }, onError: { error in
+              print(error)
+              userSlackIdResult?(nil) })
           }
+        }
     })
     session?.presentationContextProvider = contextProvider
     session?.start()

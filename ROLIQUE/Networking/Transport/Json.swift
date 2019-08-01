@@ -13,6 +13,13 @@ public struct Json: Codable {
 }
 
 public extension Json {
+  func json(_ keyPath: String) -> Json? {
+    guard let dict = self.dict(keyPath) else { return nil }
+    guard let data = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted) else { return nil }
+    guard let jsonString = String(data: data, encoding: .utf8) else { return nil }
+    return Json(stringValue: jsonString)
+  }
+  
   func string(_ keyPath: String) -> String? {
     return Json.get(json: self, keyPath: keyPath) as? String
   }
@@ -27,6 +34,10 @@ public extension Json {
   
   func float(_ keyPath: String) -> Float? {
     return Json.get(json: self, keyPath: keyPath) as? Float
+  }
+  
+  func dict(_ keyPath: String) -> [String: Any]? {
+    return Json.get(json: self, keyPath: keyPath) as? [String: Any]
   }
   
   func any(_ keyPath: String) -> Any? {
