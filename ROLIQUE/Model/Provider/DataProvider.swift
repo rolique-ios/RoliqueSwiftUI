@@ -11,20 +11,19 @@ import Networking
 import Combine
 
 public struct Action {
-   public class Late {
-    enum LateError: Error { case fail }
-  }
+   public class Late {}
 }
 
-public struct Fetch {
-  public struct Users {}
-}
+public struct Fetch<M: Model> {}
+
+public class FetchArray<A: Model> {}
+
+public class FetchUsers: FetchArray<User> {}
 
 //TODO: implement combine Publisher
 public extension Action.Late {
-  
   static func please() {
-    let latePublisher = PassthroughSubject<ActionResult, LateError>()
+    let latePublisher = PassthroughSubject<ActionResult, Error>()
     let subscriber = latePublisher.handleEvents(
       receiveSubscription: { (subscription) in
         print("new subscription")

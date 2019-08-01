@@ -30,8 +30,8 @@ public extension NetworkerCompatible {
   }
 }
 
-extension Net.Worker {
-  public static func request(_ route: Route, onSuccess: Net.JsonResult?, onError: Net.ErrorResult?) {
+public extension Net.Worker {
+  static func request(_ route: Route, onSuccess: Net.JsonResult?, onError: Net.ErrorResult?) {
     do {
       URLSession.shared.dataTask(with: try route.asRequest(), completionHandler: { (data, response, error) in
         guard error == nil else { onError?(error!); return }

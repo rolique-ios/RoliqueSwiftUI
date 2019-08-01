@@ -15,6 +15,6 @@ public class Command: Route {
       "test": isTest ? "true" : "false",
     ]
     params.keys.forEach { prms[$0] = params[$0] }
-    super.init(endpoint: "command/" + trigger, method: .get, headers: Route.authHeaders, urlParams: prms)
+    super.init(endpoint: "command/" + trigger, method: .get, urlParams: prms)
   }
 }

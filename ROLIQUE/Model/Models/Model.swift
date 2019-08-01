@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Model.swift
 //  Model
 //
 //  Created by Andrii on 8/1/19.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-public final class User: Model {
+public class Model: Codable {
   
 }

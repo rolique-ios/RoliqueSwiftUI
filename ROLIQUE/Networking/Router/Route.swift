@@ -9,15 +9,21 @@
 import Foundation
 
 public class Route {
+  
+  struct Constants {
+    static let baseApiPath = "https://roliqbot.appspot.com/api/"
+    static let authHeaders: Headers = ["token": ProcessInfo.processInfo.environment["ROLIQUE_API_TOKEN"] ?? "no token"]
+  }
+  
   public enum Method: String {
-    case get = "GET", post = "POST", put = "PUT", patch = "PATCH", delete = "DELETE"
+    case get, post, put, patch, delete
+    var value: String {
+      return self.rawValue.uppercased()
+    }
   }
   
   public typealias Headers = [String: String]
   public typealias Params = [String: String]
-  
-  private static let baseApiPath = "https://roliqbot.appspot.com/api/"
-  static let authHeaders: Headers = ["token": ProcessInfo.processInfo.environment["ROLIQUE_API_TOKEN"] ?? "no token"]
   
   public let endpoint: String
   public let method: Route.Method
@@ -25,7 +31,7 @@ public class Route {
   public let urlParams: Route.Params
   public let body: Route.Params
   
-  init (endpoint: String, method: Route.Method, headers: Route.Headers, urlParams: Route.Params = [:], body: Route.Params = [:]) {
+  init (endpoint: String, method: Route.Method, headers: Route.Headers = Constants.authHeaders, urlParams: Route.Params = [:], body: Route.Params = [:]) {
     self.endpoint = endpoint
     self.method = method
     self.headers = headers
@@ -34,7 +40,7 @@ public class Route {
   }
   
   private func makeURL() -> URL? {
-    return URL(string: Route.baseApiPath + endpoint)
+    return URL(string: Route.Constants.baseApiPath + endpoint)
   }
   
   public func asRequest() throws -> URLRequest {
@@ -46,7 +52,7 @@ public class Route {
                       cachePolicy: URLRequest.CachePolicy.useProtocolCachePolicy,
                       timeoutInterval: 30)
     request.allHTTPHeaderFields = headers
-    
+    request.httpMethod = method.value
     return request
   }
 }
