@@ -13,7 +13,8 @@ import Model
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    Action.Late.fromNow(value: "6_hs", sender: "U1TRSDJSY", onSuccess: { result in print(result) }, onError: { error in print(error) })
+    Action.Late.fromNow(value: "6_h", sender: "U1TRSDJSY", onSuccess: { result in print(result) }, onError: { error in print(error) })
+    
     return true
   }
   
@@ -28,4 +29,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return true
   }
 }
-

@@ -10,16 +10,14 @@ import Foundation
 
 public class Route {
   
-  struct Constants {
-    static let baseApiPath = "https://roliqbot.appspot.com/api/"
-    static let authHeaders: Headers = ["token": ProcessInfo.processInfo.environment["ROLIQUE_API_TOKEN"] ?? "no token"]
-  }
+//  struct Constants {
+//    static let baseApiPath = Bundle.main.infoDictionary?["ApiUrl"] as? String ?? "no token"
+//    static let authHeaders: Headers = ["token": Bundle.main.infoDictionary?["ApiToken"] as? String ?? "no token"]
+//  }
   
   public enum Method: String {
     case get, post, put, patch, delete
-    var value: String {
-      return self.rawValue.uppercased()
-    }
+    var value: String { self.rawValue.uppercased() }
   }
   
   public typealias Headers = [String: String]
@@ -27,11 +25,11 @@ public class Route {
   
   public let endpoint: String
   public let method: Route.Method
-  public let headers: Route.Headers
+  public let headers: Route.Headers?
   public let urlParams: Route.Params
   public let body: Route.Params
   
-  init (endpoint: String, method: Route.Method, headers: Route.Headers = Constants.authHeaders, urlParams: Route.Params = [:], body: Route.Params = [:]) {
+  init (endpoint: String, method: Route.Method, headers: Route.Headers? = nil, urlParams: Route.Params = [:], body: Route.Params = [:]) {
     self.endpoint = endpoint
     self.method = method
     self.headers = headers
@@ -40,7 +38,15 @@ public class Route {
   }
   
   private func makeURL() -> URL? {
-    return URL(string: Route.Constants.baseApiPath + endpoint)
+    let apiUrl = Bundle.main.infoDictionary?["ApiUrl"] as? String ?? "no_api_url"
+    let urlString = "https://" + apiUrl + endpoint
+    let url = URL(string: urlString)
+    return url
+  }
+  
+  private func makeAuthHeaders() -> Headers {
+    let token = Bundle.main.infoDictionary?["ApiToken"] as? String ?? "no_token"
+    return ["token": token]
   }
   
   public func asRequest() throws -> URLRequest {
@@ -51,7 +57,7 @@ public class Route {
     var request = URLRequest(url: url,
                       cachePolicy: URLRequest.CachePolicy.useProtocolCachePolicy,
                       timeoutInterval: 30)
-    request.allHTTPHeaderFields = headers
+    request.allHTTPHeaderFields = headers ?? makeAuthHeaders()
     request.httpMethod = method.value
     return request
   }
