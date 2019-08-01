@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import UI
 import SwiftUI
+import Model
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   var window: UIWindow?

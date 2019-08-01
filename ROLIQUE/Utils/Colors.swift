@@ -9,10 +9,10 @@
 import UIKit
 import SwiftUI
 
-struct Colors {
-  struct Login {
-    static var backgroundColor: Color {
-      return Color(UIColor(red:0.01, green:0.05, blue:0.49, alpha:1.00))
+public struct Colors {
+  public struct Login {
+    public static var backgroundColor: Color {
+      Color(UIColor(red:0.01, green:0.05, blue:0.49, alpha:1.00))
     }
   }
 }
