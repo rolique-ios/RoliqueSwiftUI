@@ -32,6 +32,6 @@ public struct ProfileView: View {
 // MARK: - Private
 private extension ProfileView {
   func testForAndrii() {
-    
+    viewModel.test()
   }
 }
