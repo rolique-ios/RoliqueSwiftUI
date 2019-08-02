@@ -47,6 +47,7 @@
 		B5AF05C422F2FCD3005B22E8 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05C322F2FCD3005B22E8 /* Env.swift */; };
 		B5AF05C622F3040A005B22E8 /* SlackLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05C522F3040A005B22E8 /* SlackLogin.swift */; };
 		B5AF05DD22F31FA9005B22E8 /* ROLIQUETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05DC22F31FA9005B22E8 /* ROLIQUETests.swift */; };
+		B5AF05E622F375EC005B22E8 /* ActionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05E522F375EC005B22E8 /* ActionManager.swift */; };
 		B5E564F522F2D3A900733CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225EF22F195DA00098DA6 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +152,7 @@
 		B5AF05DA22F31FA9005B22E8 /* ROLIQUETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ROLIQUETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AF05DC22F31FA9005B22E8 /* ROLIQUETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROLIQUETests.swift; sourceTree = "<group>"; };
 		B5AF05DE22F31FA9005B22E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5AF05E522F375EC005B22E8 /* ActionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				252821A122F20E2800D384DE /* LoginManager.swift */,
+				B5AF05E522F375EC005B22E8 /* ActionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 				B57B34C822F2297200E6A4F6 /* DataProvider.swift in Sources */,
 				B57B34D522F2B3D100E6A4F6 /* User.swift in Sources */,
 				B57B34D922F2D06A00E6A4F6 /* Model.swift in Sources */,
+				B5AF05E622F375EC005B22E8 /* ActionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

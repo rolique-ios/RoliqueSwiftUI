@@ -31,9 +31,9 @@ public final class Late: Command {
     ], isTest: isTest)
   }
   
-  public init(sender: String, from: From, value: String, isTest: Bool = false) {
+  public init(sender: String, from: String, value: String, isTest: Bool = false) {
     super.init(trigger: "late", sender: sender, params: [
-      "from": from.rawValue,
+      "from": from,
       "value": value
     ], isTest: isTest)
   }
