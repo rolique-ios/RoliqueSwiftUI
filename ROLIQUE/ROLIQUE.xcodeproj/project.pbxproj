@@ -62,6 +62,8 @@
 		B5AF05EA22F426EE005B22E8 /* debug.rolque.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B5AF05E822F426EE005B22E8 /* debug.rolque.xcconfig */; };
 		B5AF05EB22F426EE005B22E8 /* release.rolique.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B5AF05E922F426EE005B22E8 /* release.rolique.xcconfig */; };
 		B5AF05F122F42A7E005B22E8 /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05F022F42A7E005B22E8 /* Transport.swift */; };
+		B5AF05F322F42E8C005B22E8 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05F222F42E8C005B22E8 /* Action.swift */; };
+		B5AF05F622F42EFF005B22E8 /* ActionLate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05F522F42EFF005B22E8 /* ActionLate.swift */; };
 		B5E564F522F2D3A900733CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225EF22F195DA00098DA6 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -179,6 +181,8 @@
 		B5AF05E822F426EE005B22E8 /* debug.rolque.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.rolque.xcconfig; sourceTree = "<group>"; };
 		B5AF05E922F426EE005B22E8 /* release.rolique.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.rolique.xcconfig; sourceTree = "<group>"; };
 		B5AF05F022F42A7E005B22E8 /* Transport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transport.swift; sourceTree = "<group>"; };
+		B5AF05F222F42E8C005B22E8 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		B5AF05F522F42EFF005B22E8 /* ActionLate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionLate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,7 +447,7 @@
 		B57B34D722F2B3EC00E6A4F6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B57B34D222F2AF9300E6A4F6 /* ActionResult.swift */,
+				B5AF05F422F42EE0005B22E8 /* Actions */,
 				B57B34D822F2D06A00E6A4F6 /* Model.swift */,
 				B57B34D422F2B3D100E6A4F6 /* User.swift */,
 			);
@@ -485,6 +489,16 @@
 				B5AF05F022F42A7E005B22E8 /* Transport.swift */,
 			);
 			path = Private;
+			sourceTree = "<group>";
+		};
+		B5AF05F422F42EE0005B22E8 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				B57B34D222F2AF9300E6A4F6 /* ActionResult.swift */,
+				B5AF05F222F42E8C005B22E8 /* Action.swift */,
+				B5AF05F522F42EFF005B22E8 /* ActionLate.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -806,8 +820,10 @@
 				B57B34D322F2AF9300E6A4F6 /* ActionResult.swift in Sources */,
 				B57B34C822F2297200E6A4F6 /* DataProvider.swift in Sources */,
 				B57B34D522F2B3D100E6A4F6 /* User.swift in Sources */,
+				B5AF05F322F42E8C005B22E8 /* Action.swift in Sources */,
 				B57B34D922F2D06A00E6A4F6 /* Model.swift in Sources */,
 				B5AF05E622F375EC005B22E8 /* ActionManager.swift in Sources */,
+				B5AF05F622F42EFF005B22E8 /* ActionLate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
