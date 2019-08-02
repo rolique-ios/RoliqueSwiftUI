@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>UIApplicationShortcutItemIconFile</key>
-			<string>empty</string>
+			<string>Empty</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
 			<string>now</string>
 			<key>UIApplicationShortcutItemType</key>
@@ -15,8 +15,8 @@
 			<string>Doprac</string>
 		</dict>
 		<dict>
-      <key>UIApplicationShortcutItemIconFile</key>
-      <string>empty</string>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>Empty</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
 			<string>1 hour</string>
 			<key>UIApplicationShortcutItemType</key>
@@ -25,8 +25,8 @@
 			<string>Late</string>
 		</dict>
 		<dict>
-      <key>UIApplicationShortcutItemIconFile</key>
-      <string>empty</string>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>Empty</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
 			<string>Today</string>
 			<key>UIApplicationShortcutItemType</key>
@@ -35,8 +35,8 @@
 			<string>Remote</string>
 		</dict>
 		<dict>
-      <key>UIApplicationShortcutItemIconFile</key>
-      <string>empty</string>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>Empty</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
 			<string>Tomorrow</string>
 			<key>UIApplicationShortcutItemType</key>
@@ -45,8 +45,8 @@
 			<string>Remote</string>
 		</dict>
 		<dict>
-      <key>UIApplicationShortcutItemIconFile</key>
-      <string>empty</string>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>Empty</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
 			<string>Today</string>
 			<key>UIApplicationShortcutItemType</key>

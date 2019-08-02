@@ -10,6 +10,7 @@ import UIKit
 import Model
 import Combine
 import Utils
+import SwiftUI
 
 public final class ShortcutManager {
   public enum Action: Int, CaseIterable {

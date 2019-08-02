@@ -19,11 +19,13 @@ public struct ProfileView: View {
   public var body: some View {
     ZStack {
       Colors.Login.backgroundColor
-      Button("test") {
-        self.testForAndrii()
+      VStack {
+        Button("test") {
+          self.testForAndrii()
+        }
+        .padding(10)
+        .background(Color.white)
       }
-      .padding(10)
-      .background(Color.white)
     }
   }
 }
