@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import UI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    
+    UIApplication.shared.shortcutItems = ShortcutManager.shared.buildShortcutItems()
     
     return true
   }
@@ -23,16 +24,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
   }
   
+  func application(_ application: UIApplication,
+                   performActionFor shortcutItem: UIApplicationShortcutItem,
+                   completionHandler: @escaping (Bool) -> Void) {
+    completionHandler(ShortcutManager.shared.handle(shortcutItem: shortcutItem))
+  }
+  
   func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
-   print("nice1")
-
-    print("app handleOpen", url)
     return true
   }
   
   func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-    print("nice2")
-    print("app delegate", url)
     return true
   }
 }

@@ -32,7 +32,6 @@ public final class LoginViewModelImpl: LoginViewModel {
     
       let lm: LoginManager = LoginManagerImpl(presentationAnchor: presentationAnchor)
       lm.login(onSuccess: self.onSuccessLogin, onError: self.onError)
-      
     }
   }
 }
