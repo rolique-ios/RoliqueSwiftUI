@@ -9,7 +9,7 @@
 import Foundation
 
 public class Command: Route {
-  init(trigger: String, sender: String, params: Route.Params, isTest: Bool) {
+  public init(trigger: String, sender: String, params: Route.Params, isTest: Bool) {
     var prms: Route.Params = [
       "sender": sender,
       "test": isTest ? "true" : "false",

@@ -9,9 +9,10 @@
 import UIKit
 import Networking
 import AuthenticationServices
+import Combine
 
 public protocol LoginManager {
-  func login(result: ((User?) -> Void)?)
+  func login(onSuccess: PassthroughSubject<User, Never>, onError: PassthroughSubject<Error, Never>)
 }
 
 class WindowProvider: NSObject, ASWebAuthenticationPresentationContextProviding {
@@ -27,7 +28,7 @@ class WindowProvider: NSObject, ASWebAuthenticationPresentationContextProviding 
   }
 }
 
-public final class SlackManagerImpl: LoginManager {
+public final class LoginManagerImpl: LoginManager {
   
   let contextProvider: ASWebAuthenticationPresentationContextProviding
   
@@ -37,7 +38,7 @@ public final class SlackManagerImpl: LoginManager {
   
   private var session: ASWebAuthenticationSession?
   
-  public func login(result: ((User?) -> Void)?) {
+  public func login(onSuccess: PassthroughSubject<User, Never>, onError: PassthroughSubject<Error, Never>) {
     guard let url = try? SlackLogin().asRequest().url else { return }
     
     session = ASWebAuthenticationSession(
@@ -50,17 +51,22 @@ public final class SlackManagerImpl: LoginManager {
             let code = query![1]
             Net.Worker.request(SlackToken(code: code), onSuccess: { jsonResult in
               guard let userSlackId = jsonResult.string("user/id") else {
-                
-                print("failed to get string value by keypath: user/id")
-                result?(nil)
+                DispatchQueue.main.async {
+                  let error = NSError(domain: "rolique", code: 777, userInfo: [NSLocalizedDescriptionKey: "failed to get string value by keypath: user/id"])
+                  onError.send(error)
+                }
                 return
               }
-              let user = User(id: userSlackId)
-              dump(user)
-              result?(user)
+              DispatchQueue.main.async {
+                let user = User(id: userSlackId)
+                dump(user)
+                onSuccess.send(user)
+              }
             }, onError: { error in
-              print(error)
-              result?(nil) })
+              DispatchQueue.main.async {
+                onError.send(error)
+              }
+            })
           }
         }
     })

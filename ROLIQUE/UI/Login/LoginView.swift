@@ -10,6 +10,7 @@ import Utils
 import SwiftUI
 import Model
 import AuthenticationServices
+import Combine
 
 private struct Constants {
   static var logoSize: CGSize { return CGSize(width: 150, height: 150) }
@@ -30,12 +31,12 @@ public struct LoginView: View {
   
   public var body: some View {
     NavigationView {
-        MasterView(onSlackButtonPress: self.viewModel.login, pushActive: self.$pushActive)
-          .navigationBarTitle(String())
-          .navigationBarHidden(true)
-          .alert(isPresented: self.$showingAlert, content: toClosure(AlertProducer.getOkAlert(title: Strings.General.appName, message: self.error?.localizedDescription ?? "")))
-          .onReceive(self.viewModel.onError, perform: self.handleError(_:))
-          .onReceive(self.viewModel.onSuccessLogin, perform: self.handleSuccessfullLogin)
+      MasterView(onSlackButtonPress: { self.viewModel.login(presentationAnchor: UIApplication.shared.windows[0]) }, pushActive: self.$pushActive)
+        .navigationBarTitle(String())
+        .navigationBarHidden(true)
+        .alert(isPresented: self.$showingAlert, content: toClosure(AlertProducer.getOkAlert(title: Strings.General.appName, message: self.error?.localizedDescription ?? "")))
+        .onReceive(self.viewModel.onError, perform: self.handleError(_:))
+        .onReceive(self.viewModel.onSuccessLogin, perform: self.handleSuccessfullLogin)
     }
     .navigationViewStyle(StackNavigationViewStyle())
   }
@@ -43,9 +44,9 @@ public struct LoginView: View {
 
 // MARK: - Binding
 private extension LoginView {
-  func handleSuccessfullLogin() {
+  func handleSuccessfullLogin(_ user: User) {
     self.pushActive = true
-    print("handleSuccessfullLogin")
+    print("handleSuccessfullLogin", user)
   }
   
   func handleError(_ error: Error) {
@@ -57,6 +58,7 @@ private extension LoginView {
 
 // MARK: - Private
 private extension LoginView {
+
   struct MasterView: View {
     let onSlackButtonPress: () -> Void
     let pushActive: Binding<Bool>

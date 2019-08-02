@@ -14,7 +14,7 @@ public final class User: Model {
       case id
   }
   
-  var id: String
+  public var id: String
   
   init(id: String) {
     self.id = id
