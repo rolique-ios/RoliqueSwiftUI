@@ -19,7 +19,19 @@ public struct ProfileView: View {
   public var body: some View {
     ZStack {
       Colors.Login.backgroundColor
-      Text("profile")
+      Button("test") {
+        self.testForAndrii()
+      }
+      .padding(10)
+      .background(Color.white)
     }
+  }
+}
+
+
+// MARK: - Private
+private extension ProfileView {
+  func testForAndrii() {
+    
   }
 }
