@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2502D3D222F46C7200672589 /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502D3D122F46C7200672589 /* ShortcutManager.swift */; };
 		2515BD5722F1F88B00285B40 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2515BD5422F1F88B00285B40 /* UIColor.swift */; };
 		2515BD5D22F1FBBB00285B40 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2515BD5A22F1FBBB00285B40 /* Color.swift */; };
 		2528219D22F2080200D384DE /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528219C22F2080200D384DE /* UserDefaultsPropertyWrapper.swift */; };
@@ -17,8 +18,6 @@
 		2543E47222F37B1F00C85D1E /* OKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2543E47122F37B1F00C85D1E /* OKAlert.swift */; };
 		2543E47422F37C5800C85D1E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2543E47322F37C5800C85D1E /* Strings.swift */; };
 		2543E47622F37E8E00C85D1E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2543E47522F37E8E00C85D1E /* String.swift */; };
-		2543E47F22F4281100C85D1E /* debug.rolque.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2543E47D22F4281100C85D1E /* debug.rolque.xcconfig */; };
-		2543E48022F4281100C85D1E /* release.rolique.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2543E47E22F4281100C85D1E /* release.rolique.xcconfig */; };
 		254ADA3622F1DD9800B24B52 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427822F1A0F000343F96 /* LoginView.swift */; };
 		254ADA3722F1DD9800B24B52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427C22F1B5E300343F96 /* LoginViewModel.swift */; };
 		254ADA3A22F1DDA300B24B52 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE90D22F1CD7D0014A500 /* ViewModel.swift */; };
@@ -35,7 +34,6 @@
 		254DE9BA22F1DD3B0014A500 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254DE9B322F1DD3A0014A500 /* Model.framework */; };
 		254DE9BB22F1DD3B0014A500 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 254DE9B322F1DD3A0014A500 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		254DE9BF22F1DD4D0014A500 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE91222F1D0220014A500 /* Colors.swift */; };
-		2592633722F2CDD900345F63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225EF22F195DA00098DA6 /* AppDelegate.swift */; };
 		2592633922F2CDEE00345F63 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252821A122F20E2800D384DE /* LoginManager.swift */; };
 		2592633B22F2D84D00345F63 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592633A22F2D84D00345F63 /* Images.swift */; };
 		25BFDD4D22F2E57F00006591 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BFDD4C22F2E57F00006591 /* TabBarView.swift */; };
@@ -125,6 +123,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2502D3D122F46C7200672589 /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
 		2515BD5422F1F88B00285B40 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		2515BD5A22F1FBBB00285B40 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2528219C22F2080200D384DE /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
@@ -136,8 +135,6 @@
 		2543E47122F37B1F00C85D1E /* OKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKAlert.swift; sourceTree = "<group>"; };
 		2543E47322F37C5800C85D1E /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2543E47522F37E8E00C85D1E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		2543E47D22F4281100C85D1E /* debug.rolque.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.rolque.xcconfig; sourceTree = "<group>"; };
-		2543E47E22F4281100C85D1E /* release.rolique.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.rolique.xcconfig; sourceTree = "<group>"; };
 		254ADA5222F1DEE000B24B52 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		254ADA5422F1DEE000B24B52 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		254ADA5522F1DEE000B24B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -239,6 +236,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2502D3D022F46C5A00672589 /* ShortcutManager */ = {
+			isa = PBXGroup;
+			children = (
+				2502D3D122F46C7200672589 /* ShortcutManager.swift */,
+			);
+			path = ShortcutManager;
+			sourceTree = "<group>";
+		};
 		2515BD5322F1F87400285B40 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,15 +274,6 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		2543E47C22F4281100C85D1E /* BuildConfig */ = {
-			isa = PBXGroup;
-			children = (
-				2543E47D22F4281100C85D1E /* debug.rolque.xcconfig */,
-				2543E47E22F4281100C85D1E /* release.rolique.xcconfig */,
-			);
-			path = BuildConfig;
-			sourceTree = "<group>";
-		};
 		254ADA5322F1DEE000B24B52 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +301,7 @@
 		254DE98122F1DD040014A500 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2502D3D022F46C5A00672589 /* ShortcutManager */,
 				25BFDD4E22F2E58B00006591 /* Home */,
 				25BFDD5022F2E60500006591 /* Stats */,
 				25BFDD4F22F2E5FE00006591 /* Profile */,
@@ -373,7 +370,6 @@
 		25E225E322F195DA00098DA6 = {
 			isa = PBXGroup;
 			children = (
-
 				B5AF05E722F426EE005B22E8 /* BuildConfig */,
 				25E225EE22F195DA00098DA6 /* ROLIQUE */,
 				254DE98122F1DD040014A500 /* UI */,
@@ -758,7 +754,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				B5AF05EB22F426EE005B22E8 /* release.rolique.xcconfig in Resources */,
 				25E225FC22F195DC00098DA6 /* LaunchScreen.storyboard in Resources */,
 				B5AF05EA22F426EE005B22E8 /* debug.rolque.xcconfig in Resources */,
@@ -799,7 +794,7 @@
 				25BFDD5622F2E62F00006591 /* ProfileView.swift in Sources */,
 				25BFDD5422F2E62400006591 /* StatsViewModel.swift in Sources */,
 				2543E47222F37B1F00C85D1E /* OKAlert.swift in Sources */,
-				2592633722F2CDD900345F63 /* AppDelegate.swift in Sources */,
+				2502D3D222F46C7200672589 /* ShortcutManager.swift in Sources */,
 				25BFDD5822F2E63900006591 /* ProfileViewModel.swift in Sources */,
 				254ADA3622F1DD9800B24B52 /* LoginView.swift in Sources */,
 				25BFDD5222F2E61800006591 /* StatsView.swift in Sources */,
