@@ -10,7 +10,7 @@ import Foundation
 
 public final class ActionResult: Model, CustomStringConvertible {
   
-  var ok: Bool { return error == nil }
+  public var ok: Bool { return error == nil }
   public var description: String {
     return "ActionResult -> ok: \(ok), error: \(error ?? "nil")"
   }

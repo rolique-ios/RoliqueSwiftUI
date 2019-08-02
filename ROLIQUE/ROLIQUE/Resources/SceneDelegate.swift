@@ -22,5 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     self.window = window
     window.makeKeyAndVisible()
   }
+  
+  func windowScene(_ windowScene: UIWindowScene, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+    completionHandler(ShortcutManager.shared.handle(shortcutItem: shortcutItem))
+  }
 }
 

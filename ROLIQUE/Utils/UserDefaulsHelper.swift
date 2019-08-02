@@ -8,7 +8,10 @@
 
 import Foundation
 
-public struct AppUserDefaults {
+public struct UserDefaulsHelper {
   @UserDefault(key: "firstTime")
   public static var firstTime: Bool
+  
+  @UserDefault(key: "userId")
+  public static var userId: String
 }

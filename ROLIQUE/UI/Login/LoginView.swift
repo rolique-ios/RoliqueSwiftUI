@@ -46,6 +46,7 @@ public struct LoginView: View {
 private extension LoginView {
   func handleSuccessfullLogin(_ user: User) {
     self.pushActive = true
+    UserDefaulsHelper.userId = user.id
     print("handleSuccessfullLogin", user)
   }
   

@@ -24,7 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
   }
   
-  func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+  func application(_ application: UIApplication,
+                   performActionFor shortcutItem: UIApplicationShortcutItem,
+                   completionHandler: @escaping (Bool) -> Void) {
     completionHandler(ShortcutManager.shared.handle(shortcutItem: shortcutItem))
   }
   

@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import Model
+import Combine
+import Utils
 
 public final class ShortcutManager {
   public enum Action: Int, CaseIterable {
     case dopracNow,
+    late1hour,
     remoteToday,
     remoteTomorrow,
-    late1hour,
     sickToday
     
     var title: String {
@@ -44,18 +47,41 @@ public final class ShortcutManager {
       }
     }
     
+    init(shortcutItem: UIApplicationShortcutItem) {
+      self = Action(rawValue: Int(shortcutItem.type)!)!
+    }
+    
     var shortcutItem: UIApplicationShortcutItem {
       UIApplicationShortcutItem(type: String(self.rawValue), localizedTitle: self.title, localizedSubtitle: self.subtitle, icon: nil, userInfo: nil)
     }
   }
   
   public static let shared = ShortcutManager()
+  private init() {
+    let _ = subject.sink { result in
+      print("\(result)")
+    }
+  }
   
   public func buildShortcutItems() -> [UIApplicationShortcutItem] {
     Action.allCases.map { $0.shortcutItem }
   }
   
+  private var subject = PassthroughSubject<ActionResult, Never>()
+  
   public func handle(shortcutItem: UIApplicationShortcutItem) -> Bool {
+    let action = Action(shortcutItem: shortcutItem)
+    let am: ActionManger = ActionMangerImpl()
+    
+    switch action {
+    case .late1hour:
+      if let userId = UserDefaulsHelper.userId {
+        let action = ActionLate(sender: userId, from: "now", value: "1_h")
+        am.sendAction(action, subject: self.subject)
+      }
+    default:
+      break
+    }
     return true
   }
 }

@@ -31,11 +31,7 @@ public final class LoginViewModelImpl: LoginViewModel {
       guard let self = self else { return }
     
       let lm: LoginManager = LoginManagerImpl(presentationAnchor: presentationAnchor)
-      lm.login(onSuccess: self.onSuccessLogin, onError: self.onError)
-//      let am: ActionManger = ActionMangerImpl()
-//      let action = ActionLate(sender: "U1TRSDJSY", from: "now", value: "5_m")
-//      am.sendAction(action, subject: self.onSuccessLogin)
-      
+      lm.login(onSuccess: self.onSuccessLogin, onError: self.onError)      
     }
   }
 }
