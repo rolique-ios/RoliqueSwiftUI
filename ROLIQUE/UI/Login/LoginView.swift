@@ -30,7 +30,7 @@ public struct LoginView: View {
   
   public var body: some View {
     NavigationView {
-      MasterView(onSlackButtonPress: { self.viewModel.login() }, pushActive: self.$pushActive)
+      MasterView(onSlackButtonPress: { self.viewModel.login(presentationAnchor: UIApplication.shared.windows[0]) }, pushActive: self.$pushActive)
         .navigationBarTitle(String())
         .navigationBarHidden(true)
         .alert(isPresented: self.$showingAlert, content: toClosure(AlertProducer.getOkAlert(title: Strings.General.appName, message: self.error?.localizedDescription ?? "")))
@@ -43,9 +43,10 @@ public struct LoginView: View {
 
 // MARK: - Binding
 private extension LoginView {
-  func handleSuccessfullLogin() {
+  
+  func handleSuccessfullLogin(_ user: User) {
     self.pushActive = true
-    print("handleSuccessfullLogin")
+    print("handleSuccessfullLogin", user)
   }
   
   func handleError(_ error: Error) {
@@ -57,19 +58,7 @@ private extension LoginView {
 
 // MARK: - Private
 private extension LoginView {
-//<<<<<<< HEAD
-//  func composeSlackButton() -> some View {
-//    Button(action: {
-//      self.sm.login(result: { user in
-//        Action.Late.fromNow(value: "5_m", sender: user?.id ?? "", result: { result in print(result) })
-//      })
-//    }) {
-//      Images.Login.slackButton
-//        .renderingMode(.original)
-//        .resizable()
-//        .aspectRatio(contentMode: .fit)
-//        .frame(width: Constants.slackButtonSize.width, height: Constants.slackButtonSize.height)
-//=======
+
   struct MasterView: View {
     let onSlackButtonPress: () -> Void
     let pushActive: Binding<Bool>
@@ -102,7 +91,6 @@ private extension LoginView {
             .frame(width: Constants.slackButtonSize.width, height: Constants.slackButtonSize.height)
         }
 //      }
-//>>>>>>> cc1ed222f96ebff3135e75b62000e467d1a7c088
     }
   }
   

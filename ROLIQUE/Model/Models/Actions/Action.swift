@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Networking
 
 public class Action: Model {
   
@@ -16,15 +17,20 @@ public class Action: Model {
   }
   
   enum CodingKeys: String, CodingKey {
-      case type, props
+      case type, props, sender
   }
   
   public var type: ActionType
+  public var sender: String
   public var props: [String: String]?
   
-  init(type: String, props: [String: String]? = nil) {
+  init(sender: String, type: String, props: [String: String]? = nil) {
     self.type = ActionType(rawValue: type) ?? .empty
-    var map: [String: Any] = ["type": type]
+    self.sender = sender
+    self.props = props
+    var map: [String: Any] = [
+      "sender": sender,
+      "type": type]
     if let props = props {
       map["props"] = props
     }
@@ -36,6 +42,7 @@ public class Action: Model {
     let typeString = try values.decode(String.self, forKey: .type)
     self.type =  ActionType(rawValue: typeString) ?? .empty
     self.props = try values.decode([String: String].self, forKey: .props)
+    self.sender = try values.decode(String.self, forKey: .sender)
     try super.init(from: decoder)
   }
 
@@ -43,9 +50,11 @@ public class Action: Model {
     var container = encoder.container(keyedBy: CodingKeys.self)
     try container.encode(type.rawValue, forKey: .type)
     try container.encode(props, forKey: .props)
+    try container.encode(sender, forKey: .sender)
     try super.encode(to: encoder)
   }
-  
-}
 
- 
+  func makeCommand() -> Command {
+    return Command(trigger: type.rawValue, sender: sender, params: props ?? [:], isTest: true)
+  }
+}

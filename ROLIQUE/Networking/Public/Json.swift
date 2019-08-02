@@ -37,6 +37,10 @@ public extension Json {
     return Json.get(json: self, keyPath: keyPath) as? Float
   }
   
+  func dict() -> [String: Any]? {
+    return Json.parse(self.stringValue)
+  }
+  
   func dict(_ keyPath: String) -> [String: Any]? {
     return Json.get(json: self, keyPath: keyPath) as? [String: Any]
   }

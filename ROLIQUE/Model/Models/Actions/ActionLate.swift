@@ -8,9 +8,9 @@
 
 import Foundation
 
-class ActionLate: Action {
-  init(sender: String, from: String, value: String) {
-    super.init(type: "late", props: ["sender": sender, "from": from, "value": value])
+public final class ActionLate: Action {
+  public init(sender: String, from: String, value: String) {
+    super.init(sender: sender, type: "late", props: ["from": from, "value": value])
   }
   
   required init(from decoder: Decoder) throws {

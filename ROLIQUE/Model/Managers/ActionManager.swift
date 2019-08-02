@@ -8,19 +8,29 @@
 
 import Foundation
 import Networking
+import Combine
 
 public enum ActionType {
   
 }
 
 public protocol ActionManger {
-  func sendAction(_ action: ActionType)
+  func sendAction(_ action: Action, subject: PassthroughSubject<ActionResult, Never>)
 }
 
 public final class ActionMangerImpl: ActionManger {
-  public func sendAction(_ action: ActionType) {
-
+  
+  public init() {}
+  
+  public func sendAction(_ action: Action, subject: PassthroughSubject<ActionResult, Never>) {
+    Net.Worker.request(action.makeCommand(), onSuccess: { json in
+      DispatchQueue.main.async {
+        subject.send(ActionResult(map: json.dict()))
+      }
+    }, onError: { error in
+      DispatchQueue.main.async {
+        subject.send(ActionResult(error: error))
+      }
+    })
   }
-  
-  
 }

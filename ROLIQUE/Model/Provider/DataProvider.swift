@@ -10,14 +10,16 @@ import Foundation
 import Networking
 import Combine
 
-
 public struct Fetch<M: ModelType> {}
 
 public class FetchArray<A: ModelType> {}
 
 public class FetchUsers: FetchArray<User> {}
 
-protocol ProviderProtocol {
+
+
+
+protocol ProviderProtocol: ObservableObject, Identifiable {
   associatedtype ModelType
   //@
   var bindableObject: ModelType? { get }
