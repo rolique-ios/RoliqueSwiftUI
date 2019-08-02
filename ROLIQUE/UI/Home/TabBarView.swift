@@ -13,7 +13,13 @@ private struct Constants {
   static var tabItemSize: CGSize { return CGSize(width: 20, height: 20) }
 }
 
-public struct TabbarView: View {
+public struct HomeView: View {
+  public var body: some View {
+    TabBarView()
+  }
+}
+
+private struct TabBarView: View {
   @State var selectedTab = Tab.profile
   
   enum Tab: Int {
@@ -40,7 +46,7 @@ public struct TabbarView: View {
     }
   }
   
-  public var body: some View {
+  var body: some View {
     TabView(selection: $selectedTab) {
       ProfileView(viewModel: ProfileViewModelImpl()).tabItem {
         self.tabbarItem(Tab.profile)
@@ -51,14 +57,13 @@ public struct TabbarView: View {
           .tag(Tab.stats)
       }
     }
-    .navigationBarTitle(String())
-    .navigationBarHidden(true)
+    .navigationBarBackButtonHidden(true)
     .edgesIgnoringSafeArea(.top)
   }
 }
 
 // MARK: - Private
-private extension TabbarView {
+private extension TabBarView {
   func tabbarItem(_ tab: Tab) -> some View {
     VStack {
       tab.image

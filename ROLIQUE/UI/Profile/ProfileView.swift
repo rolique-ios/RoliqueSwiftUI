@@ -17,8 +17,9 @@ public struct ProfileView: View {
   }
   
   public var body: some View {
-    return ZStack {
+    ZStack {
       Colors.Login.backgroundColor
+      Text("profile")
     }
   }
 }

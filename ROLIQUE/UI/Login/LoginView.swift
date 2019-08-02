@@ -68,7 +68,7 @@ private extension LoginView {
           Logo()
           Spacer()
           SlackButton(onPress: self.onSlackButtonPress, pushActive: pushActive)
-          NavigationLink(destination: TabbarView(), isActive: self.pushActive) {
+          NavigationLink(destination: HomeView(), isActive: self.pushActive) {
             Text("")
           }.hidden()
         }.padding(Constants.edgeInsets)

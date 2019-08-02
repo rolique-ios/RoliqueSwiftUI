@@ -293,7 +293,7 @@
 		254DE98122F1DD040014A500 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				25BFDD4E22F2E58B00006591 /* TabBarView */,
+				25BFDD4E22F2E58B00006591 /* Home */,
 				25BFDD5022F2E60500006591 /* Stats */,
 				25BFDD4F22F2E5FE00006591 /* Profile */,
 				25FC427422F19C8600343F96 /* Base */,
@@ -332,12 +332,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		25BFDD4E22F2E58B00006591 /* TabBarView */ = {
+		25BFDD4E22F2E58B00006591 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				25BFDD4C22F2E57F00006591 /* TabBarView.swift */,
 			);
-			path = TabBarView;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		25BFDD4F22F2E5FE00006591 /* Profile */ = {
