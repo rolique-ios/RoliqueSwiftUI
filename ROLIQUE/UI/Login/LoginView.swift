@@ -19,6 +19,7 @@ private struct Constants {
 
 public struct LoginView: View {
   private let viewModel: LoginViewModel
+  
   @State private var showingAlert = false
   @State var error: Error? = nil
   @State var pushActive = false
@@ -29,12 +30,12 @@ public struct LoginView: View {
   
   public var body: some View {
     NavigationView {
-      MasterView(onSlackButtonPress: { self.viewModel.login() }, pushActive: self.$pushActive)
-        .navigationBarTitle(String())
-        .navigationBarHidden(true)
-        .alert(isPresented: self.$showingAlert, content: toClosure(AlertProducer.getOkAlert(title: Strings.General.appName, message: self.error?.localizedDescription ?? "")))
-        .onReceive(self.viewModel.onError, perform: self.handleError(_:))
-        .onReceive(self.viewModel.onSuccessLogin, perform: self.handleSuccessfullLogin)
+        MasterView(onSlackButtonPress: self.viewModel.login, pushActive: self.$pushActive)
+          .navigationBarTitle(String())
+          .navigationBarHidden(true)
+          .alert(isPresented: self.$showingAlert, content: toClosure(AlertProducer.getOkAlert(title: Strings.General.appName, message: self.error?.localizedDescription ?? "")))
+          .onReceive(self.viewModel.onError, perform: self.handleError(_:))
+          .onReceive(self.viewModel.onSuccessLogin, perform: self.handleSuccessfullLogin)
     }
     .navigationViewStyle(StackNavigationViewStyle())
   }
@@ -67,6 +68,9 @@ private extension LoginView {
           Logo()
           Spacer()
           SlackButton(onPress: self.onSlackButtonPress, pushActive: pushActive)
+          NavigationLink(destination: TabbarView(), isActive: self.pushActive) {
+            Text("")
+          }.hidden()
         }.padding(Constants.edgeInsets)
       }
     }
@@ -80,14 +84,12 @@ private extension LoginView {
       Button(action: {
         self.onPress()
       }) {
-//        NavigationLink.init(destination: ProfileView(viewModel: ProfileViewModelImpl()), isActive: self.pushActive) {
-          Images.Login.slackButton
-            .renderingMode(.original)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: Constants.slackButtonSize.width, height: Constants.slackButtonSize.height)
-        }
-//      }
+        Images.Login.slackButton
+          .renderingMode(.original)
+          .resizable()
+          .aspectRatio(contentMode: .fit)
+          .frame(width: Constants.slackButtonSize.width, height: Constants.slackButtonSize.height)
+      }
     }
   }
   

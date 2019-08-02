@@ -18,7 +18,7 @@ public struct ProfileView: View {
   
   public var body: some View {
     return ZStack {
-      Color.random.edgesIgnoringSafeArea(.all)
+      Colors.Login.backgroundColor
     }
   }
 }

@@ -9,3 +9,8 @@
 import Foundation
 
 public protocol ViewModel {}
+class BaseViewModel: ViewModel {
+  deinit {
+    print("☠️\(String(describing: self))☠️")
+  }
+}

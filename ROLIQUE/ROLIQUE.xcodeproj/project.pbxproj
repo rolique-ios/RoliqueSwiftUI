@@ -17,8 +17,8 @@
 		2543E47222F37B1F00C85D1E /* OKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2543E47122F37B1F00C85D1E /* OKAlert.swift */; };
 		2543E47422F37C5800C85D1E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2543E47322F37C5800C85D1E /* Strings.swift */; };
 		2543E47622F37E8E00C85D1E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2543E47522F37E8E00C85D1E /* String.swift */; };
-		2543E47A22F384C300C85D1E /* release.rolique.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2543E47822F384C300C85D1E /* release.rolique.xcconfig */; };
-		2543E47B22F384C300C85D1E /* debug.rolque.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2543E47922F384C300C85D1E /* debug.rolque.xcconfig */; };
+		2543E47F22F4281100C85D1E /* debug.rolque.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2543E47D22F4281100C85D1E /* debug.rolque.xcconfig */; };
+		2543E48022F4281100C85D1E /* release.rolique.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2543E47E22F4281100C85D1E /* release.rolique.xcconfig */; };
 		254ADA3622F1DD9800B24B52 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427822F1A0F000343F96 /* LoginView.swift */; };
 		254ADA3722F1DD9800B24B52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427C22F1B5E300343F96 /* LoginViewModel.swift */; };
 		254ADA3A22F1DDA300B24B52 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE90D22F1CD7D0014A500 /* ViewModel.swift */; };
@@ -130,8 +130,8 @@
 		2543E47122F37B1F00C85D1E /* OKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKAlert.swift; sourceTree = "<group>"; };
 		2543E47322F37C5800C85D1E /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2543E47522F37E8E00C85D1E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		2543E47822F384C300C85D1E /* release.rolique.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.rolique.xcconfig; sourceTree = "<group>"; };
-		2543E47922F384C300C85D1E /* debug.rolque.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.rolque.xcconfig; sourceTree = "<group>"; };
+		2543E47D22F4281100C85D1E /* debug.rolque.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.rolque.xcconfig; sourceTree = "<group>"; };
+		2543E47E22F4281100C85D1E /* release.rolique.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.rolique.xcconfig; sourceTree = "<group>"; };
 		254ADA5222F1DEE000B24B52 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		254ADA5422F1DEE000B24B52 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		254ADA5522F1DEE000B24B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -256,6 +256,15 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		2543E47C22F4281100C85D1E /* BuildConfig */ = {
+			isa = PBXGroup;
+			children = (
+				2543E47D22F4281100C85D1E /* debug.rolque.xcconfig */,
+				2543E47E22F4281100C85D1E /* release.rolique.xcconfig */,
+			);
+			path = BuildConfig;
+			sourceTree = "<group>";
+		};
 		254ADA5322F1DEE000B24B52 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,7 +361,7 @@
 		25E225E322F195DA00098DA6 = {
 			isa = PBXGroup;
 			children = (
-				B53D758E22F2E0EF003E7B9C /* BuildConfig */,
+				2543E47C22F4281100C85D1E /* BuildConfig */,
 				25E225EE22F195DA00098DA6 /* ROLIQUE */,
 				254DE98122F1DD040014A500 /* UI */,
 				254DE9A322F1DD240014A500 /* Utils */,
@@ -407,16 +416,6 @@
 				25FC427C22F1B5E300343F96 /* LoginViewModel.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		B53D758E22F2E0EF003E7B9C /* BuildConfig */ = {
-			isa = PBXGroup;
-			children = (
-				2543E47922F384C300C85D1E /* debug.rolque.xcconfig */,
-				2543E47822F384C300C85D1E /* release.rolique.xcconfig */,
-			);
-			name = BuildConfig;
-			path = ../BuildConfig;
 			sourceTree = "<group>";
 		};
 		B57B34BC22F1E3C000E6A4F6 /* Routes */ = {
@@ -717,11 +716,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2543E48022F4281100C85D1E /* release.rolique.xcconfig in Resources */,
 				25E225FC22F195DC00098DA6 /* LaunchScreen.storyboard in Resources */,
+				2543E47F22F4281100C85D1E /* debug.rolque.xcconfig in Resources */,
 				25E225F922F195DC00098DA6 /* Preview Assets.xcassets in Resources */,
 				25E225F622F195DC00098DA6 /* Assets.xcassets in Resources */,
-				2543E47A22F384C300C85D1E /* release.rolique.xcconfig in Resources */,
-				2543E47B22F384C300C85D1E /* debug.rolque.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

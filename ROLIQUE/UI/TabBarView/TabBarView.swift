@@ -7,31 +7,64 @@
 //
 
 import SwiftUI
+import Utils
 
-struct TabbarView: View {
+private struct Constants {
+  static var tabItemSize: CGSize { return CGSize(width: 20, height: 20) }
+}
+
+public struct TabbarView: View {
   @State var selectedTab = Tab.profile
   
   enum Tab: Int {
-    case profile, stats
-  }
-  
-  func tabbarItem(text: String, image: String) -> some View {
-    VStack {
-      Image(systemName: image)
-        .imageScale(.large)
-      Text(text)
+    case profile,
+    stats
+    
+    var image: Image {
+      switch self {
+      case .profile:
+        return Images.TabBar.profile
+        
+      case .stats:
+        return Images.TabBar.stats
+      }
+    }
+    
+    var name: String {
+      switch self {
+      case .profile:
+        return Strings.TabBar.profile.firstUppercased
+      case .stats:
+        return Strings.TabBar.stats.firstUppercased
+      }
     }
   }
   
-  var body: some View {
+  public var body: some View {
     TabView(selection: $selectedTab) {
       ProfileView(viewModel: ProfileViewModelImpl()).tabItem {
-        self.tabbarItem(text: "Profile", image: "profile").tag(Tab.profile)
+        self.tabbarItem(Tab.profile)
+          .tag(Tab.profile)
       }
       StatsView(viewModel: StatsViewModelImpl()).tabItem {
-        self.tabbarItem(text: "Stats", image: "stats").tag(Tab.stats)
+        self.tabbarItem(Tab.stats)
+          .tag(Tab.stats)
       }
     }
+    .navigationBarTitle(String())
+    .navigationBarHidden(true)
     .edgesIgnoringSafeArea(.top)
+  }
+}
+
+// MARK: - Private
+private extension TabbarView {
+  func tabbarItem(_ tab: Tab) -> some View {
+    VStack {
+      tab.image
+        .resizable()
+        .frame(width: Constants.tabItemSize.width, height: Constants.tabItemSize.height)
+      Text(tab.name)
+    }
   }
 }

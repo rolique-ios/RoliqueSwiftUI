@@ -24,13 +24,13 @@ public final class LoginViewModelImpl: LoginViewModel {
 
   public init() {}
   public func login() {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0) { [weak self] in
       guard let self = self else { return }
-      if Bool.random() {
-        self.onError.send(General.somethingWentWrong)
-      } else {
+//      if Bool.random() {
+//        self.onError.send(General.somethingWentWrong)
+//      } else {
         self.onSuccessLogin.send()
-      }
+//      }
     }
   }
 }
