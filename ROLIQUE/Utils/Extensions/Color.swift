@@ -13,4 +13,8 @@ public extension Color {
   init(hex: String) {
     self.init(UIColor.init(hex: hex) ?? .clear)
   }
+  
+  static var random: Color {
+    Color(UIColor.random)
+  }
 }

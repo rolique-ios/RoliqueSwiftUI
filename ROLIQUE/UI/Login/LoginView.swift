@@ -6,7 +6,6 @@
 //  Copyright © 2019 Bohdan Savych. All rights reserved.
 //
 
-import UIKit
 import Utils
 import SwiftUI
 import Model
@@ -21,48 +20,100 @@ private struct Constants {
 
 public struct LoginView: View {
   private let viewModel: LoginViewModel
-  let sm: LoginManager = SlackManagerImpl(presentationAnchor: UIApplication.shared.windows[0])
-
+  @State private var showingAlert = false
+  @State var error: Error? = nil
+  @State var pushActive = false
   
   public init(viewModel: LoginViewModel) {
     self.viewModel = viewModel
   }
   
   public var body: some View {
-    ZStack {
-      Colors.Login.backgroundColor.edgesIgnoringSafeArea(.all)
-      VStack {
-        self.composeLogo()
-        Spacer()
-        self.composeSlackButton()
-      }.padding(Constants.edgeInsets)
+    NavigationView {
+      MasterView(onSlackButtonPress: { self.viewModel.login() }, pushActive: self.$pushActive)
+        .navigationBarTitle(String())
+        .navigationBarHidden(true)
+        .alert(isPresented: self.$showingAlert, content: toClosure(AlertProducer.getOkAlert(title: Strings.General.appName, message: self.error?.localizedDescription ?? "")))
+        .onReceive(self.viewModel.onError, perform: self.handleError(_:))
+        .onReceive(self.viewModel.onSuccessLogin, perform: self.handleSuccessfullLogin)
     }
+    .navigationViewStyle(StackNavigationViewStyle())
+  }
+}
+
+// MARK: - Binding
+private extension LoginView {
+  func handleSuccessfullLogin() {
+    self.pushActive = true
+    print("handleSuccessfullLogin")
+  }
+  
+  func handleError(_ error: Error) {
+    self.showingAlert = true
+    self.error = error
+    print("handleError")
   }
 }
 
 // MARK: - Private
 private extension LoginView {
-  func composeSlackButton() -> some View {
-    Button(action: {
-      self.sm.login(result: { user in
-        Action.Late.fromNow(value: "5_m", sender: user?.id ?? "", result: { result in print(result) })
-      })
-    }) {
-      Images.Login.slackButton
-        .renderingMode(.original)
-        .resizable()
-        .aspectRatio(contentMode: .fit)
-        .frame(width: Constants.slackButtonSize.width, height: Constants.slackButtonSize.height)
+//<<<<<<< HEAD
+//  func composeSlackButton() -> some View {
+//    Button(action: {
+//      self.sm.login(result: { user in
+//        Action.Late.fromNow(value: "5_m", sender: user?.id ?? "", result: { result in print(result) })
+//      })
+//    }) {
+//      Images.Login.slackButton
+//        .renderingMode(.original)
+//        .resizable()
+//        .aspectRatio(contentMode: .fit)
+//        .frame(width: Constants.slackButtonSize.width, height: Constants.slackButtonSize.height)
+//=======
+  struct MasterView: View {
+    let onSlackButtonPress: () -> Void
+    let pushActive: Binding<Bool>
+    
+    var body: some View {
+      ZStack {
+        Colors.Login.backgroundColor.edgesIgnoringSafeArea(.all)
+        VStack {
+          Logo()
+          Spacer()
+          SlackButton(onPress: self.onSlackButtonPress, pushActive: pushActive)
+        }.padding(Constants.edgeInsets)
+      }
     }
   }
   
-  func composeLogo() -> some View {
-    return
+  struct SlackButton: View {
+    let onPress: () -> Void
+    let pushActive: Binding<Bool>
+    
+    var body: some View {
+      Button(action: {
+        self.onPress()
+      }) {
+//        NavigationLink.init(destination: ProfileView(viewModel: ProfileViewModelImpl()), isActive: self.pushActive) {
+          Images.Login.slackButton
+            .renderingMode(.original)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: Constants.slackButtonSize.width, height: Constants.slackButtonSize.height)
+        }
+//      }
+//>>>>>>> cc1ed222f96ebff3135e75b62000e467d1a7c088
+    }
+  }
+  
+  struct Logo: View {
+    var body: some View {
       Images.Login.fullLogo
-      .renderingMode(.original)
-      .resizable()
-      .frame(width: Constants.logoSize.width, height: Constants.logoSize.height)
-      .padding(.all, 20)
-      .border(Color.white, width: 1, cornerRadius: 5)
+        .renderingMode(.original)
+        .resizable()
+        .frame(width: Constants.logoSize.width, height: Constants.logoSize.height)
+        .padding(.all, 20)
+        .border(Color.white, width: 1, cornerRadius: 5)
+    }
   }
 }
