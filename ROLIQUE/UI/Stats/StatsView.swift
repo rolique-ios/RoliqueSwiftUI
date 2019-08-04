@@ -18,7 +18,8 @@ public struct StatsView: View {
   
   public var body: some View {
     ZStack {
-      Colors.Login.backgroundColor.edgesIgnoringSafeArea(.all)
+      Colors.Login.backgroundColor
+      Text("stats")
     }
   }
 }

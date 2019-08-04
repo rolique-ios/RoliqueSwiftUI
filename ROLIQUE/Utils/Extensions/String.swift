@@ -12,4 +12,11 @@ public extension String {
   var localized: String {
     NSLocalizedString(self, comment: self)
   }
+  
+  var firstUppercased: String {
+    let symbols = Array(self)
+    let first = symbols.first?.uppercased()
+    let other = String(symbols[1...]).lowercased()
+    return first.orEmpty + other
+  }
 }

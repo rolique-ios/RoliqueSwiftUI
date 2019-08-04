@@ -10,6 +10,7 @@ import Utils
 import SwiftUI
 import Model
 import AuthenticationServices
+import Combine
 
 private struct Constants {
   static var logoSize: CGSize { return CGSize(width: 150, height: 150) }
@@ -19,6 +20,7 @@ private struct Constants {
 
 public struct LoginView: View {
   private let viewModel: LoginViewModel
+  
   @State private var showingAlert = false
   @State var error: Error? = nil
   @State var pushActive = false
@@ -29,7 +31,7 @@ public struct LoginView: View {
   
   public var body: some View {
     NavigationView {
-      MasterView(onSlackButtonPress: { self.viewModel.login() }, pushActive: self.$pushActive)
+      MasterView(onSlackButtonPress: { self.viewModel.login(presentationAnchor: UIApplication.shared.windows[0]) }, pushActive: self.$pushActive)
         .navigationBarTitle(String())
         .navigationBarHidden(true)
         .alert(isPresented: self.$showingAlert, content: toClosure(AlertProducer.getOkAlert(title: Strings.General.appName, message: self.error?.localizedDescription ?? "")))
@@ -42,9 +44,10 @@ public struct LoginView: View {
 
 // MARK: - Binding
 private extension LoginView {
-  func handleSuccessfullLogin() {
+  func handleSuccessfullLogin(_ user: User) {
     self.pushActive = true
-    print("handleSuccessfullLogin")
+    UserDefaulsHelper.userId = user.id
+    print("handleSuccessfullLogin", user)
   }
   
   func handleError(_ error: Error) {
@@ -56,6 +59,7 @@ private extension LoginView {
 
 // MARK: - Private
 private extension LoginView {
+
   struct MasterView: View {
     let onSlackButtonPress: () -> Void
     let pushActive: Binding<Bool>
@@ -67,6 +71,9 @@ private extension LoginView {
           Logo()
           Spacer()
           SlackButton(onPress: self.onSlackButtonPress, pushActive: pushActive)
+          NavigationLink(destination: HomeView(), isActive: self.pushActive) {
+            Text("")
+          }.hidden()
         }.padding(Constants.edgeInsets)
       }
     }
@@ -80,14 +87,12 @@ private extension LoginView {
       Button(action: {
         self.onPress()
       }) {
-//        NavigationLink.init(destination: ProfileView(viewModel: ProfileViewModelImpl()), isActive: self.pushActive) {
-          Images.Login.slackButton
-            .renderingMode(.original)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: Constants.slackButtonSize.width, height: Constants.slackButtonSize.height)
-        }
-//      }
+        Images.Login.slackButton
+          .renderingMode(.original)
+          .resizable()
+          .aspectRatio(contentMode: .fit)
+          .frame(width: Constants.slackButtonSize.width, height: Constants.slackButtonSize.height)
+      }
     }
   }
   

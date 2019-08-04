@@ -17,8 +17,23 @@ public struct ProfileView: View {
   }
   
   public var body: some View {
-    return ZStack {
-      Color.random.edgesIgnoringSafeArea(.all)
+    ZStack {
+      Colors.Login.backgroundColor
+      VStack {
+        Button("test") {
+          self.testForAndrii()
+        }
+        .padding(10)
+        .background(Color.white)
+      }
     }
+  }
+}
+
+
+// MARK: - Private
+private extension ProfileView {
+  func testForAndrii() {
+    
   }
 }

@@ -9,28 +9,29 @@
 import Foundation
 import Combine
 import SwiftUI
+import Model
+import AuthenticationServices
 
 public protocol LoginViewModel: ViewModel {
   var onError: PassthroughSubject<Error, Never> { get }
-  var onSuccessLogin: PassthroughSubject<Void, Never> { get }
+  var onSuccessLogin: PassthroughSubject<User, Never> { get }
 
-  func login()
+  func login(presentationAnchor: ASPresentationAnchor)
 }
 
 public final class LoginViewModelImpl: LoginViewModel {
   public var onError = PassthroughSubject<Error, Never>()
-  public var onSuccessLogin = PassthroughSubject<Void, Never>()
+  public var onSuccessLogin = PassthroughSubject<User, Never>()
 
 
   public init() {}
-  public func login() {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+
+  public func login(presentationAnchor: ASPresentationAnchor) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0) { [weak self] in
       guard let self = self else { return }
-      if Bool.random() {
-        self.onError.send(General.somethingWentWrong)
-      } else {
-        self.onSuccessLogin.send()
-      }
+    
+      let lm: LoginManager = LoginManagerImpl(presentationAnchor: presentationAnchor)
+      lm.login(onSuccess: self.onSuccessLogin, onError: self.onError)      
     }
   }
 }

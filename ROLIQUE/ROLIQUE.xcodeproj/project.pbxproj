@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2502D3D222F46C7200672589 /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2502D3D122F46C7200672589 /* ShortcutManager.swift */; };
 		2515BD5722F1F88B00285B40 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2515BD5422F1F88B00285B40 /* UIColor.swift */; };
 		2515BD5D22F1FBBB00285B40 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2515BD5A22F1FBBB00285B40 /* Color.swift */; };
 		2528219D22F2080200D384DE /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528219C22F2080200D384DE /* UserDefaultsPropertyWrapper.swift */; };
@@ -17,8 +18,6 @@
 		2543E47222F37B1F00C85D1E /* OKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2543E47122F37B1F00C85D1E /* OKAlert.swift */; };
 		2543E47422F37C5800C85D1E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2543E47322F37C5800C85D1E /* Strings.swift */; };
 		2543E47622F37E8E00C85D1E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2543E47522F37E8E00C85D1E /* String.swift */; };
-		2543E47A22F384C300C85D1E /* release.rolique.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2543E47822F384C300C85D1E /* release.rolique.xcconfig */; };
-		2543E47B22F384C300C85D1E /* debug.rolque.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2543E47922F384C300C85D1E /* debug.rolque.xcconfig */; };
 		254ADA3622F1DD9800B24B52 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427822F1A0F000343F96 /* LoginView.swift */; };
 		254ADA3722F1DD9800B24B52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FC427C22F1B5E300343F96 /* LoginViewModel.swift */; };
 		254ADA3A22F1DDA300B24B52 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE90D22F1CD7D0014A500 /* ViewModel.swift */; };
@@ -35,7 +34,23 @@
 		254DE9BA22F1DD3B0014A500 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254DE9B322F1DD3A0014A500 /* Model.framework */; };
 		254DE9BB22F1DD3B0014A500 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 254DE9B322F1DD3A0014A500 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		254DE9BF22F1DD4D0014A500 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DE91222F1D0220014A500 /* Colors.swift */; };
-		2592633722F2CDD900345F63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225EF22F195DA00098DA6 /* AppDelegate.swift */; };
+		255C145622F605C800E7358E /* UsersWidget.h in Headers */ = {isa = PBXBuildFile; fileRef = 255C145422F605C800E7358E /* UsersWidget.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		255C145922F605C800E7358E /* UsersWidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 255C145222F605C800E7358E /* UsersWidget.framework */; };
+		255C145A22F605C800E7358E /* UsersWidget.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 255C145222F605C800E7358E /* UsersWidget.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		255C146022F605EE00E7358E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255C145E22F605EE00E7358E /* ImageCache.swift */; };
+		255C146122F605EE00E7358E /* Faker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255C145F22F605EE00E7358E /* Faker.swift */; };
+		255C146622F605F600E7358E /* Userable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255C146222F605F600E7358E /* Userable.swift */; };
+		255C146722F605F600E7358E /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 255C146422F605F600E7358E /* UserCollectionViewCell.xib */; };
+		255C146822F605F600E7358E /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255C146522F605F600E7358E /* UserCollectionViewCell.swift */; };
+		255C146A22F605FB00E7358E /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255C146922F605FB00E7358E /* UsersViewController.swift */; };
+		255C147222F6065200E7358E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 255C147122F6065200E7358E /* NotificationCenter.framework */; };
+		255C147522F6065200E7358E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255C147422F6065200E7358E /* TodayViewController.swift */; };
+		255C147822F6065200E7358E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 255C147622F6065200E7358E /* MainInterface.storyboard */; };
+		255C147C22F6065200E7358E /* RemoteTodayVacation.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 255C146F22F6065200E7358E /* RemoteTodayVacation.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		255C149922F6071400E7358E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 255C147122F6065200E7358E /* NotificationCenter.framework */; };
+		255C149C22F6071400E7358E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255C149B22F6071400E7358E /* TodayViewController.swift */; };
+		255C149F22F6071400E7358E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 255C149D22F6071400E7358E /* MainInterface.storyboard */; };
+		255C14A322F6071400E7358E /* VacationTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 255C149822F6071400E7358E /* VacationTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2592633922F2CDEE00345F63 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252821A122F20E2800D384DE /* LoginManager.swift */; };
 		2592633B22F2D84D00345F63 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2592633A22F2D84D00345F63 /* Images.swift */; };
 		25BFDD4D22F2E57F00006591 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BFDD4C22F2E57F00006591 /* TabBarView.swift */; };
@@ -60,6 +75,12 @@
 		B5AF05C422F2FCD3005B22E8 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05C322F2FCD3005B22E8 /* Env.swift */; };
 		B5AF05C622F3040A005B22E8 /* SlackLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05C522F3040A005B22E8 /* SlackLogin.swift */; };
 		B5AF05DD22F31FA9005B22E8 /* ROLIQUETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05DC22F31FA9005B22E8 /* ROLIQUETests.swift */; };
+		B5AF05E622F375EC005B22E8 /* ActionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05E522F375EC005B22E8 /* ActionManager.swift */; };
+		B5AF05EA22F426EE005B22E8 /* debug.rolque.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B5AF05E822F426EE005B22E8 /* debug.rolque.xcconfig */; };
+		B5AF05EB22F426EE005B22E8 /* release.rolique.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B5AF05E922F426EE005B22E8 /* release.rolique.xcconfig */; };
+		B5AF05F122F42A7E005B22E8 /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05F022F42A7E005B22E8 /* Transport.swift */; };
+		B5AF05F322F42E8C005B22E8 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05F222F42E8C005B22E8 /* Action.swift */; };
+		B5AF05F622F42EFF005B22E8 /* ActionLate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF05F522F42EFF005B22E8 /* ActionLate.swift */; };
 		B5E564F522F2D3A900733CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E225EF22F195DA00098DA6 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +113,27 @@
 			remoteGlobalIDString = 254DE9B222F1DD3A0014A500;
 			remoteInfo = Model;
 		};
+		255C145722F605C800E7358E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25E225E422F195DA00098DA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 255C145122F605C800E7358E;
+			remoteInfo = UsersWidget;
+		};
+		255C147A22F6065200E7358E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25E225E422F195DA00098DA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 255C146E22F6065200E7358E;
+			remoteInfo = RemoteTodayVacation;
+		};
+		255C14A122F6071400E7358E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25E225E422F195DA00098DA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 255C149722F6071400E7358E;
+			remoteInfo = VacationTodayExtension;
+		};
 		B5AF05DF22F31FA9005B22E8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 25E225E422F195DA00098DA6 /* Project object */;
@@ -102,6 +144,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		255C148022F6065200E7358E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				255C147C22F6065200E7358E /* RemoteTodayVacation.appex in Embed App Extensions */,
+				255C14A322F6071400E7358E /* VacationTodayExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		25FC426E22F19A8500343F96 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -111,6 +165,7 @@
 				254ADA5A22F1DEE000B24B52 /* Networking.framework in Embed Frameworks */,
 				254DE9AA22F1DD240014A500 /* Utils.framework in Embed Frameworks */,
 				254DE9BB22F1DD3B0014A500 /* Model.framework in Embed Frameworks */,
+				255C145A22F605C800E7358E /* UsersWidget.framework in Embed Frameworks */,
 				254DE98822F1DD040014A500 /* UI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -119,6 +174,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2502D3D122F46C7200672589 /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
 		2515BD5422F1F88B00285B40 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		2515BD5A22F1FBBB00285B40 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2528219C22F2080200D384DE /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
@@ -130,8 +186,6 @@
 		2543E47122F37B1F00C85D1E /* OKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKAlert.swift; sourceTree = "<group>"; };
 		2543E47322F37C5800C85D1E /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2543E47522F37E8E00C85D1E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		2543E47822F384C300C85D1E /* release.rolique.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.rolique.xcconfig; sourceTree = "<group>"; };
-		2543E47922F384C300C85D1E /* debug.rolque.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.rolque.xcconfig; sourceTree = "<group>"; };
 		254ADA5222F1DEE000B24B52 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		254ADA5422F1DEE000B24B52 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		254ADA5522F1DEE000B24B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -146,6 +200,24 @@
 		254DE9B322F1DD3A0014A500 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		254DE9B522F1DD3B0014A500 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		254DE9B622F1DD3B0014A500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		255C145222F605C800E7358E /* UsersWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UsersWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		255C145422F605C800E7358E /* UsersWidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsersWidget.h; sourceTree = "<group>"; };
+		255C145522F605C800E7358E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		255C145E22F605EE00E7358E /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		255C145F22F605EE00E7358E /* Faker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faker.swift; sourceTree = "<group>"; };
+		255C146222F605F600E7358E /* Userable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Userable.swift; sourceTree = "<group>"; };
+		255C146422F605F600E7358E /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
+		255C146522F605F600E7358E /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
+		255C146922F605FB00E7358E /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		255C146F22F6065200E7358E /* RemoteTodayVacation.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RemoteTodayVacation.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		255C147122F6065200E7358E /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		255C147422F6065200E7358E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		255C147722F6065200E7358E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		255C147922F6065200E7358E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		255C149822F6071400E7358E /* VacationTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VacationTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		255C149B22F6071400E7358E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		255C149E22F6071400E7358E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		255C14A022F6071400E7358E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2592633A22F2D84D00345F63 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		25BFDD4C22F2E57F00006591 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		25BFDD5122F2E61800006591 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
@@ -175,6 +247,12 @@
 		B5AF05DA22F31FA9005B22E8 /* ROLIQUETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ROLIQUETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AF05DC22F31FA9005B22E8 /* ROLIQUETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROLIQUETests.swift; sourceTree = "<group>"; };
 		B5AF05DE22F31FA9005B22E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5AF05E522F375EC005B22E8 /* ActionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionManager.swift; sourceTree = "<group>"; };
+		B5AF05E822F426EE005B22E8 /* debug.rolque.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.rolque.xcconfig; sourceTree = "<group>"; };
+		B5AF05E922F426EE005B22E8 /* release.rolique.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.rolique.xcconfig; sourceTree = "<group>"; };
+		B5AF05F022F42A7E005B22E8 /* Transport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transport.swift; sourceTree = "<group>"; };
+		B5AF05F222F42E8C005B22E8 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		B5AF05F522F42EFF005B22E8 /* ActionLate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionLate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +284,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		255C144F22F605C800E7358E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		255C146C22F6065200E7358E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				255C147222F6065200E7358E /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		255C149522F6071400E7358E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				255C149922F6071400E7358E /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		25E225E922F195DA00098DA6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +314,7 @@
 				254ADA5922F1DEE000B24B52 /* Networking.framework in Frameworks */,
 				254DE9A922F1DD240014A500 /* Utils.framework in Frameworks */,
 				254DE9BA22F1DD3B0014A500 /* Model.framework in Frameworks */,
+				255C145922F605C800E7358E /* UsersWidget.framework in Frameworks */,
 				254DE98722F1DD040014A500 /* UI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +329,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2502D3D022F46C5A00672589 /* ShortcutManager */ = {
+			isa = PBXGroup;
+			children = (
+				2502D3D122F46C7200672589 /* ShortcutManager.swift */,
+			);
+			path = ShortcutManager;
+			sourceTree = "<group>";
+		};
 		2515BD5322F1F87400285B40 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				252821A122F20E2800D384DE /* LoginManager.swift */,
+				B5AF05E522F375EC005B22E8 /* ActionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -259,9 +370,8 @@
 		254ADA5322F1DEE000B24B52 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				B5AF05C322F2FCD3005B22E8 /* Env.swift */,
-				B57B34BD22F1E3D300E6A4F6 /* Transport */,
-				B57B34BC22F1E3C000E6A4F6 /* Routes */,
+				B5AF05EF22F42A3A005B22E8 /* Private */,
+				B5AF05EE22F42A26005B22E8 /* Public */,
 				254ADA5422F1DEE000B24B52 /* Networking.h */,
 				254ADA5522F1DEE000B24B52 /* Info.plist */,
 			);
@@ -284,7 +394,8 @@
 		254DE98122F1DD040014A500 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				25BFDD4E22F2E58B00006591 /* TabBarView */,
+				2502D3D022F46C5A00672589 /* ShortcutManager */,
+				25BFDD4E22F2E58B00006591 /* Home */,
 				25BFDD5022F2E60500006591 /* Stats */,
 				25BFDD4F22F2E5FE00006591 /* Profile */,
 				25FC427422F19C8600343F96 /* Base */,
@@ -323,12 +434,63 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		25BFDD4E22F2E58B00006591 /* TabBarView */ = {
+		255C145322F605C800E7358E /* UsersWidget */ = {
+			isa = PBXGroup;
+			children = (
+				255C146922F605FB00E7358E /* UsersViewController.swift */,
+				255C146222F605F600E7358E /* Userable.swift */,
+				255C146322F605F600E7358E /* UserCell */,
+				255C145F22F605EE00E7358E /* Faker.swift */,
+				255C145E22F605EE00E7358E /* ImageCache.swift */,
+				255C145422F605C800E7358E /* UsersWidget.h */,
+				255C145522F605C800E7358E /* Info.plist */,
+			);
+			path = UsersWidget;
+			sourceTree = "<group>";
+		};
+		255C146322F605F600E7358E /* UserCell */ = {
+			isa = PBXGroup;
+			children = (
+				255C146422F605F600E7358E /* UserCollectionViewCell.xib */,
+				255C146522F605F600E7358E /* UserCollectionViewCell.swift */,
+			);
+			path = UserCell;
+			sourceTree = "<group>";
+		};
+		255C147022F6065200E7358E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				255C147122F6065200E7358E /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		255C147322F6065200E7358E /* RemoteTodayVacation */ = {
+			isa = PBXGroup;
+			children = (
+				255C147422F6065200E7358E /* TodayViewController.swift */,
+				255C147622F6065200E7358E /* MainInterface.storyboard */,
+				255C147922F6065200E7358E /* Info.plist */,
+			);
+			path = RemoteTodayVacation;
+			sourceTree = "<group>";
+		};
+		255C149A22F6071400E7358E /* VacationTodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				255C149B22F6071400E7358E /* TodayViewController.swift */,
+				255C149D22F6071400E7358E /* MainInterface.storyboard */,
+				255C14A022F6071400E7358E /* Info.plist */,
+			);
+			path = VacationTodayExtension;
+			sourceTree = "<group>";
+		};
+		25BFDD4E22F2E58B00006591 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				25BFDD4C22F2E57F00006591 /* TabBarView.swift */,
 			);
-			path = TabBarView;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		25BFDD4F22F2E5FE00006591 /* Profile */ = {
@@ -352,13 +514,17 @@
 		25E225E322F195DA00098DA6 = {
 			isa = PBXGroup;
 			children = (
-				B53D758E22F2E0EF003E7B9C /* BuildConfig */,
+				B5AF05E722F426EE005B22E8 /* BuildConfig */,
 				25E225EE22F195DA00098DA6 /* ROLIQUE */,
 				254DE98122F1DD040014A500 /* UI */,
 				254DE9A322F1DD240014A500 /* Utils */,
 				254DE9B422F1DD3B0014A500 /* Model */,
 				254ADA5322F1DEE000B24B52 /* Networking */,
 				B5AF05DB22F31FA9005B22E8 /* ROLIQUETests */,
+				255C145322F605C800E7358E /* UsersWidget */,
+				255C147322F6065200E7358E /* RemoteTodayVacation */,
+				255C149A22F6071400E7358E /* VacationTodayExtension */,
+				255C147022F6065200E7358E /* Frameworks */,
 				25E225ED22F195DA00098DA6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -372,6 +538,9 @@
 				254DE9B322F1DD3A0014A500 /* Model.framework */,
 				254ADA5222F1DEE000B24B52 /* Networking.framework */,
 				B5AF05DA22F31FA9005B22E8 /* ROLIQUETests.xctest */,
+				255C145222F605C800E7358E /* UsersWidget.framework */,
+				255C146F22F6065200E7358E /* RemoteTodayVacation.appex */,
+				255C149822F6071400E7358E /* VacationTodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -409,16 +578,6 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		B53D758E22F2E0EF003E7B9C /* BuildConfig */ = {
-			isa = PBXGroup;
-			children = (
-				2543E47922F384C300C85D1E /* debug.rolque.xcconfig */,
-				2543E47822F384C300C85D1E /* release.rolique.xcconfig */,
-			);
-			name = BuildConfig;
-			path = ../BuildConfig;
-			sourceTree = "<group>";
-		};
 		B57B34BC22F1E3C000E6A4F6 /* Routes */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,15 +586,6 @@
 				B57B34C622F226DC00E6A4F6 /* Commands */,
 			);
 			path = Routes;
-			sourceTree = "<group>";
-		};
-		B57B34BD22F1E3D300E6A4F6 /* Transport */ = {
-			isa = PBXGroup;
-			children = (
-				B57B34BE22F1E42100E6A4F6 /* Net.swift */,
-				B57B34CA22F22B4600E6A4F6 /* Json.swift */,
-			);
-			path = Transport;
 			sourceTree = "<group>";
 		};
 		B57B34C622F226DC00E6A4F6 /* Commands */ = {
@@ -458,7 +608,7 @@
 		B57B34D722F2B3EC00E6A4F6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B57B34D222F2AF9300E6A4F6 /* ActionResult.swift */,
+				B5AF05F422F42EE0005B22E8 /* Actions */,
 				B57B34D822F2D06A00E6A4F6 /* Model.swift */,
 				B57B34D422F2B3D100E6A4F6 /* User.swift */,
 			);
@@ -472,6 +622,44 @@
 				B5AF05DE22F31FA9005B22E8 /* Info.plist */,
 			);
 			path = ROLIQUETests;
+			sourceTree = "<group>";
+		};
+		B5AF05E722F426EE005B22E8 /* BuildConfig */ = {
+			isa = PBXGroup;
+			children = (
+				B5AF05E822F426EE005B22E8 /* debug.rolque.xcconfig */,
+				B5AF05E922F426EE005B22E8 /* release.rolique.xcconfig */,
+			);
+			path = BuildConfig;
+			sourceTree = "<group>";
+		};
+		B5AF05EE22F42A26005B22E8 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				B57B34BC22F1E3C000E6A4F6 /* Routes */,
+				B57B34CA22F22B4600E6A4F6 /* Json.swift */,
+				B5AF05C322F2FCD3005B22E8 /* Env.swift */,
+				B57B34BE22F1E42100E6A4F6 /* Net.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		B5AF05EF22F42A3A005B22E8 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				B5AF05F022F42A7E005B22E8 /* Transport.swift */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		B5AF05F422F42EE0005B22E8 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				B57B34D222F2AF9300E6A4F6 /* ActionResult.swift */,
+				B5AF05F222F42E8C005B22E8 /* Action.swift */,
+				B5AF05F522F42EFF005B22E8 /* ActionLate.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,6 +694,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				254DE9B722F1DD3B0014A500 /* Model.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		255C144D22F605C800E7358E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				255C145622F605C800E7358E /* UsersWidget.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +780,58 @@
 			productReference = 254DE9B322F1DD3A0014A500 /* Model.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		255C145122F605C800E7358E /* UsersWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 255C145B22F605C800E7358E /* Build configuration list for PBXNativeTarget "UsersWidget" */;
+			buildPhases = (
+				255C144D22F605C800E7358E /* Headers */,
+				255C144E22F605C800E7358E /* Sources */,
+				255C144F22F605C800E7358E /* Frameworks */,
+				255C145022F605C800E7358E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UsersWidget;
+			productName = UsersWidget;
+			productReference = 255C145222F605C800E7358E /* UsersWidget.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		255C146E22F6065200E7358E /* RemoteTodayVacation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 255C147D22F6065200E7358E /* Build configuration list for PBXNativeTarget "RemoteTodayVacation" */;
+			buildPhases = (
+				255C146B22F6065200E7358E /* Sources */,
+				255C146C22F6065200E7358E /* Frameworks */,
+				255C146D22F6065200E7358E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoteTodayVacation;
+			productName = RemoteTodayVacation;
+			productReference = 255C146F22F6065200E7358E /* RemoteTodayVacation.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		255C149722F6071400E7358E /* VacationTodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 255C14A422F6071500E7358E /* Build configuration list for PBXNativeTarget "VacationTodayExtension" */;
+			buildPhases = (
+				255C149422F6071400E7358E /* Sources */,
+				255C149522F6071400E7358E /* Frameworks */,
+				255C149622F6071400E7358E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VacationTodayExtension;
+			productName = VacationTodayExtension;
+			productReference = 255C149822F6071400E7358E /* VacationTodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		25E225EB22F195DA00098DA6 /* ROLIQUE */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25E2260022F195DC00098DA6 /* Build configuration list for PBXNativeTarget "ROLIQUE" */;
@@ -592,6 +840,7 @@
 				25E225E922F195DA00098DA6 /* Frameworks */,
 				25E225EA22F195DA00098DA6 /* Resources */,
 				25FC426E22F19A8500343F96 /* Embed Frameworks */,
+				255C148022F6065200E7358E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -600,6 +849,9 @@
 				254DE9A822F1DD240014A500 /* PBXTargetDependency */,
 				254DE9B922F1DD3B0014A500 /* PBXTargetDependency */,
 				254ADA5822F1DEE000B24B52 /* PBXTargetDependency */,
+				255C145822F605C800E7358E /* PBXTargetDependency */,
+				255C147B22F6065200E7358E /* PBXTargetDependency */,
+				255C14A222F6071400E7358E /* PBXTargetDependency */,
 			);
 			name = ROLIQUE;
 			packageProductDependencies = (
@@ -650,6 +902,16 @@
 						CreatedOnToolsVersion = 11.0;
 						LastSwiftMigration = 1100;
 					};
+					255C145122F605C800E7358E = {
+						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
+					};
+					255C146E22F6065200E7358E = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					255C149722F6071400E7358E = {
+						CreatedOnToolsVersion = 11.0;
+					};
 					25E225EB22F195DA00098DA6 = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -680,6 +942,9 @@
 				254DE9B222F1DD3A0014A500 /* Model */,
 				254ADA5122F1DEE000B24B52 /* Networking */,
 				B5AF05D922F31FA9005B22E8 /* ROLIQUETests */,
+				255C145122F605C800E7358E /* UsersWidget */,
+				255C146E22F6065200E7358E /* RemoteTodayVacation */,
+				255C149722F6071400E7358E /* VacationTodayExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -713,15 +978,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		255C145022F605C800E7358E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				255C146722F605F600E7358E /* UserCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		255C146D22F6065200E7358E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				255C147822F6065200E7358E /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		255C149622F6071400E7358E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				255C149F22F6071400E7358E /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		25E225EA22F195DA00098DA6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5AF05EB22F426EE005B22E8 /* release.rolique.xcconfig in Resources */,
 				25E225FC22F195DC00098DA6 /* LaunchScreen.storyboard in Resources */,
+				B5AF05EA22F426EE005B22E8 /* debug.rolque.xcconfig in Resources */,
 				25E225F922F195DC00098DA6 /* Preview Assets.xcassets in Resources */,
 				25E225F622F195DC00098DA6 /* Assets.xcassets in Resources */,
-				2543E47A22F384C300C85D1E /* release.rolique.xcconfig in Resources */,
-				2543E47B22F384C300C85D1E /* debug.rolque.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,6 +1035,7 @@
 				B5AF05C422F2FCD3005B22E8 /* Env.swift in Sources */,
 				B57B34BF22F1E42100E6A4F6 /* Net.swift in Sources */,
 				B57B34C522F1F7E000E6A4F6 /* Command.swift in Sources */,
+				B5AF05F122F42A7E005B22E8 /* Transport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,7 +1046,7 @@
 				25BFDD5622F2E62F00006591 /* ProfileView.swift in Sources */,
 				25BFDD5422F2E62400006591 /* StatsViewModel.swift in Sources */,
 				2543E47222F37B1F00C85D1E /* OKAlert.swift in Sources */,
-				2592633722F2CDD900345F63 /* AppDelegate.swift in Sources */,
+				2502D3D222F46C7200672589 /* ShortcutManager.swift in Sources */,
 				25BFDD5822F2E63900006591 /* ProfileViewModel.swift in Sources */,
 				254ADA3622F1DD9800B24B52 /* LoginView.swift in Sources */,
 				25BFDD5222F2E61800006591 /* StatsView.swift in Sources */,
@@ -792,7 +1082,38 @@
 				B57B34D322F2AF9300E6A4F6 /* ActionResult.swift in Sources */,
 				B57B34C822F2297200E6A4F6 /* DataProvider.swift in Sources */,
 				B57B34D522F2B3D100E6A4F6 /* User.swift in Sources */,
+				B5AF05F322F42E8C005B22E8 /* Action.swift in Sources */,
 				B57B34D922F2D06A00E6A4F6 /* Model.swift in Sources */,
+				B5AF05E622F375EC005B22E8 /* ActionManager.swift in Sources */,
+				B5AF05F622F42EFF005B22E8 /* ActionLate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		255C144E22F605C800E7358E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				255C146622F605F600E7358E /* Userable.swift in Sources */,
+				255C146822F605F600E7358E /* UserCollectionViewCell.swift in Sources */,
+				255C146A22F605FB00E7358E /* UsersViewController.swift in Sources */,
+				255C146022F605EE00E7358E /* ImageCache.swift in Sources */,
+				255C146122F605EE00E7358E /* Faker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		255C146B22F6065200E7358E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				255C147522F6065200E7358E /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		255C149422F6071400E7358E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				255C149C22F6071400E7358E /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -838,6 +1159,21 @@
 			target = 254DE9B222F1DD3A0014A500 /* Model */;
 			targetProxy = 254DE9B822F1DD3B0014A500 /* PBXContainerItemProxy */;
 		};
+		255C145822F605C800E7358E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 255C145122F605C800E7358E /* UsersWidget */;
+			targetProxy = 255C145722F605C800E7358E /* PBXContainerItemProxy */;
+		};
+		255C147B22F6065200E7358E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 255C146E22F6065200E7358E /* RemoteTodayVacation */;
+			targetProxy = 255C147A22F6065200E7358E /* PBXContainerItemProxy */;
+		};
+		255C14A222F6071400E7358E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 255C149722F6071400E7358E /* VacationTodayExtension */;
+			targetProxy = 255C14A122F6071400E7358E /* PBXContainerItemProxy */;
+		};
 		B5AF05E022F31FA9005B22E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 25E225EB22F195DA00098DA6 /* ROLIQUE */;
@@ -846,6 +1182,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		255C147622F6065200E7358E /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				255C147722F6065200E7358E /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		255C149D22F6071400E7358E /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				255C149E22F6071400E7358E /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		25E225FA22F195DC00098DA6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1079,8 +1431,144 @@
 			};
 			name = Release;
 		};
+		255C145C22F605C800E7358E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZL58JZZ8KD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UsersWidget/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.rolique.UsersWidget;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		255C145D22F605C800E7358E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZL58JZZ8KD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UsersWidget/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.rolique.UsersWidget;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		255C147E22F6065200E7358E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZL58JZZ8KD;
+				INFOPLIST_FILE = RemoteTodayVacation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.rolique.ROLIQUE.RemoteTodayVacation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		255C147F22F6065200E7358E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZL58JZZ8KD;
+				INFOPLIST_FILE = RemoteTodayVacation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.rolique.ROLIQUE.RemoteTodayVacation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		255C14A522F6071500E7358E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZL58JZZ8KD;
+				INFOPLIST_FILE = VacationTodayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.rolique.ROLIQUE.VacationTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		255C14A622F6071500E7358E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZL58JZZ8KD;
+				INFOPLIST_FILE = VacationTodayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.rolique.ROLIQUE.VacationTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		25E225FE22F195DC00098DA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5AF05E822F426EE005B22E8 /* debug.rolque.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1141,6 +1629,7 @@
 		};
 		25E225FF22F195DC00098DA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5AF05E922F426EE005B22E8 /* release.rolique.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1202,6 +1691,10 @@
 				DEVELOPMENT_ASSET_PATHS = "ROLIQUE/Resources/Preview\\ Content";
 				DEVELOPMENT_TEAM = ZL58JZZ8KD;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ROLIQUE/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1223,6 +1716,10 @@
 				DEVELOPMENT_ASSET_PATHS = "ROLIQUE/Resources/Preview\\ Content";
 				DEVELOPMENT_TEAM = ZL58JZZ8KD;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ROLIQUE/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1310,6 +1807,33 @@
 			buildConfigurations = (
 				254DE9BD22F1DD3B0014A500 /* Debug */,
 				254DE9BE22F1DD3B0014A500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		255C145B22F605C800E7358E /* Build configuration list for PBXNativeTarget "UsersWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				255C145C22F605C800E7358E /* Debug */,
+				255C145D22F605C800E7358E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		255C147D22F6065200E7358E /* Build configuration list for PBXNativeTarget "RemoteTodayVacation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				255C147E22F6065200E7358E /* Debug */,
+				255C147F22F6065200E7358E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		255C14A422F6071500E7358E /* Build configuration list for PBXNativeTarget "VacationTodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				255C14A522F6071500E7358E /* Debug */,
+				255C14A622F6071500E7358E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

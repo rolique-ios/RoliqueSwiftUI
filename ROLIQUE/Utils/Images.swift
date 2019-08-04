@@ -10,6 +10,15 @@ import Foundation
 import SwiftUI
 
 public struct Images {
+  public struct TabBar {
+    public static var profile: Image {
+      Image("profile")
+    }
+    
+    public static var stats: Image {
+      Image("stats")
+    }
+  }
   public struct Login {
     public static var fullLogo: Image {
       Image("logoFull")
